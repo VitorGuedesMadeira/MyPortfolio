@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+.status {
+  position: absolute;
+  width: 375px;
+  height: 44px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.7);
+}
+.time {
+  position: absolute;
+  width: 54px;
+  height: 21px;
+  left: 21px;
+  top: 13px;
+}
+.time p {
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.28px;
+}
+.statusicons {
+  position: absolute;
+  width: 66.66px;
+  height: 11.34px;
+  left: 293.67px;
+  top: 11.33px;
+}
+.container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 44px;
+  bottom: 0px;
+  background-color: rgba(0,0,0,0.7);
+  width: 375px;
+  height: 48px;
+  margin: 0px;
+  padding: 0px 50px;
+}
+.logobox{
+  padding: 10px 12px;
+  position: absolute;
+  width: 101px;
+  height: 44px;
+  left: 35px;
+  top: calc(50% - 44px/2);
+}
+.logo {
+  color: white;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 3px;
+}
+.menu {
+  padding: 8px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: calc(50% - 40px/2);
+  border-radius: 8px;
+}
+.menupart {
+  position: absolute;
+  width: 18px;
+  height: 12px;
+  left: 3px;
+  top: 6px;
+}
+.headline {
+  background-color: #1C1A19;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 120px 35px;
+  gap: 12px;
+  position: absolute;
+  width: 375px;
+  height: 590px;
+  left: 0px;
+  top: 92px;
+  background-image: url(images/backgroundIllustration.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.headlinetitle {
+  color: #FF6B00;
+  width: 327px;
+  height: 124px;
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+}
+.subtitle {
+  color: #FFF5E1;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+}
+.headline p {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+}
+.icons {
+  padding: 0px;
+  width: 200px;
+  height: 40px;
+}
+.icons a {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
