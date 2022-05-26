@@ -18,7 +18,7 @@
 
 - GitHub: [@vitorguedesmadeira](https://github.com/VitorGuedesMadeira)
 - Twitter: [@CDahguedes](https://twitter.com/CDahguedes)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/v%C3%ADtor-guedes-madeira-1691aa15a/)
+- LinkedIn: (https://www.linkedin.com/in/v%C3%ADtor-guedes-madeira-1691aa15a/)
 
 ## 🤝 Contributing
 
