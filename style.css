@@ -4,8 +4,8 @@
 
 * {
   box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -13,8 +13,8 @@
   position: absolute;
   width: 375px;
   height: 44px;
-  left: 0px;
-  background-color: rgba(0,0,0,0.7);
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .time {
@@ -27,7 +27,7 @@
 
 .time p {
   color: white;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -46,24 +46,24 @@
 
 .container {
   position: absolute;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   top: 44px;
-  bottom: 0px;
-  background-color: rgba(0,0,0,0.7);
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 375px;
   height: 48px;
-  margin: 0px;
-  padding: 0px 50px;
+  margin: 0;
+  padding: 0 50px;
 }
 
-.logobox{
+.logobox {
   padding: 10px 12px;
   position: absolute;
   width: 101px;
   height: 44px;
   left: 35px;
-  top: calc(50% - 44px/2);
+  top: calc(50% - 44px / 2);
 }
 
 .logo {
@@ -79,7 +79,7 @@
   width: 40px;
   height: 40px;
   right: 20px;
-  top: calc(50% - 40px/2);
+  top: calc(50% - 40px / 2);
   border-radius: 8px;
 }
 
@@ -101,7 +101,7 @@
   position: absolute;
   width: 375px;
   height: 590px;
-  left: 0px;
+  left: 0;
   top: 92px;
   background-image: url(images/backgroundIllustration.png);
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@
 }
 
 .headlinetitle {
-  color: #FF6B00;
+  color: #ff6b00;
   width: 327px;
   height: 124px;
   font-family: 'Crete Round', sans-serif;
@@ -121,7 +121,7 @@
 }
 
 .subtitle {
-  color: #FFF5E1;
+  color: #fff5e1;
   padding-bottom: 10px;
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
@@ -136,7 +136,7 @@
 }
 
 .icons {
-  padding: 0px;
+  padding: 0;
   width: 200px;
   height: 40px;
 }
