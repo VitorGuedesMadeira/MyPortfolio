@@ -8,6 +8,7 @@
   margin: 0px;
   text-decoration: none;
 }
+
 .status {
   position: absolute;
   width: 375px;
@@ -15,6 +16,7 @@
   left: 0px;
   background-color: rgba(0,0,0,0.7);
 }
+
 .time {
   position: absolute;
   width: 54px;
@@ -22,6 +24,7 @@
   left: 21px;
   top: 13px;
 }
+
 .time p {
   color: white;
   font-family: 'Roboto';
@@ -32,6 +35,7 @@
   text-align: center;
   letter-spacing: -0.28px;
 }
+
 .statusicons {
   position: absolute;
   width: 66.66px;
@@ -39,6 +43,7 @@
   left: 293.67px;
   top: 11.33px;
 }
+
 .container {
   position: absolute;
   left: 0px;
@@ -51,6 +56,7 @@
   margin: 0px;
   padding: 0px 50px;
 }
+
 .logobox{
   padding: 10px 12px;
   position: absolute;
@@ -59,12 +65,14 @@
   left: 35px;
   top: calc(50% - 44px/2);
 }
+
 .logo {
   color: white;
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 3px;
 }
+
 .menu {
   padding: 8px;
   position: absolute;
@@ -74,6 +82,7 @@
   top: calc(50% - 40px/2);
   border-radius: 8px;
 }
+
 .menupart {
   position: absolute;
   width: 18px;
@@ -81,6 +90,7 @@
   left: 3px;
   top: 6px;
 }
+
 .headline {
   background-color: #1C1A19;
   display: flex;
@@ -97,23 +107,26 @@
   background-repeat: no-repeat;
   background-position: bottom right;
 }
+
 .headlinetitle {
   color: #FF6B00;
   width: 327px;
   height: 124px;
-  font-family: 'Crete Round';
+  font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 56px;
   line-height: 64px;
   letter-spacing: 0.37px;
 }
+
 .subtitle {
   color: #FFF5E1;
   padding-bottom: 10px;
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
 }
+
 .headline p {
   color: white;
   font-family: 'Poppins', sans-serif;
@@ -121,11 +134,13 @@
   font-size: 16px;
   font-style: normal;
 }
+
 .icons {
   padding: 0px;
   width: 200px;
   height: 40px;
 }
+
 .icons a {
   padding: 8px;
   width: 40px;
