@@ -124,8 +124,8 @@ main {
 
 .workstitle {
   width: 327px;
-  height: 0;    
-  font-family: 'Crete Round';
+  height: 0;
+  font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -147,10 +147,10 @@ main {
   justify-content: flex-start;
   padding: 0 25px;
 }
-   
+
 .firstproject h2 {
-  color: #091E42;
-  font-family: 'Crete Round';
+  color: #091e42;
+  font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -159,8 +159,8 @@ main {
 }
 
 .firstproject p {
-  color: #091E42;
-  font-family: 'Inter';
+  color: #091e42;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -172,19 +172,19 @@ main {
   display: inline;
   width: 295px;
   background-color: white;
-  color: #091E42;
-  border: 1px solid #8993A4;
+  color: #091e42;
+  border: 1px solid #8993a4;
   padding: 5px 10px;
   margin-right: 10px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-   }
+}
 
 .firstbuttom {
-  background: #FF6B00;
+  background: #ff6b00;
   border: none;
   color: white;
   padding: 12px;
@@ -202,17 +202,17 @@ main {
 }
 
 .firstbuttom:active {
-    background-color: rgb(255, 0, 0);
-    transform: scale(0.9);
-    border: 4px solid red;
-    color: white;
-  }
+  background-color: rgb(255, 0, 0);
+  transform: scale(0.9);
+  border: 4px solid red;
+  color: white;
+}
 
 .worksprojects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   gap: 24px;
   width: 375px;
   height: 100%;
@@ -230,12 +230,9 @@ main {
 
 .buttons {
   width: 327px;
-  background: #FF6B00;
+  background: #ff6b00;
   border: none;
   margin-top: 35px;
-}
-
-.buttons p {
   color: white;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
@@ -243,6 +240,7 @@ main {
   font-weight: 900;
   font-size: 17px;
   line-height: 24px;
+  padding: 20px 0;
 }
 
 .projects h2 {
@@ -254,7 +252,7 @@ main {
   font-size: 32px;
   line-height: 44px;
   color: white;
-  margin: 0px 25px;
+  margin: 0 25px;
 }
 
 .projects p {
@@ -277,7 +275,7 @@ main {
   color: white;
   padding: 15px;
   margin-left: 10px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -298,7 +296,7 @@ main {
 }
 
 .aboutme h1 {
-  color: #FF6B00;
+  color: #ff6b00;
   width: 327px;
   height: 79px;
   font-family: 'Crete Round', sans-serif;
@@ -317,17 +315,17 @@ main {
   font-weight: 100;
   font-size: 16px;
   line-height: 24px;
-  color: #F4F5F7;
+  color: #f4f5f7;
 }
 
 .buttom {
   gap: 10px;
   width: 161px;
   height: 48px;
-  background: #FF6B00;
+  background: #ff6b00;
   margin-left: 25px;
   color: white;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -349,7 +347,7 @@ main {
 .skills h2 {
   color: white;
   padding-top: 30px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -359,7 +357,7 @@ main {
 .skills h3 {
   color: rgb(226, 226, 226);
   padding-top: 30px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -370,11 +368,10 @@ main {
   background-color: white;
   text-align: center;
   padding: 100px 30px;
-
 }
 
 .formulary h2 {
-  color: #172B4D;
+  color: #172b4d;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -405,7 +402,7 @@ main {
 
 .form input::placeholder {
   color: rgb(172, 172, 172);
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -414,7 +411,7 @@ main {
 
 .form textarea::placeholder {
   color: rgba(0, 0, 0, 0.829);
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -422,7 +419,7 @@ main {
 }
 
 .form textarea {
-  background-color: #FBF8F7;
+  background-color: #fbf8f7;
   border: none;
   margin-bottom: 25px;
   height: 114px;
@@ -452,17 +449,17 @@ main {
   transform: scale(0.9);
   border: 4px solid red;
   color: white;
-  }
+}
 
 .finalbuttom {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   padding: 12px;
   gap: 10px;
-  background-color: #FF6B00;
+  background-color: #ff6b00;
   color: white;
   border: none;
   border: 4px solid white;
@@ -494,7 +491,7 @@ footer {
   height: 65px;
   width: 375px;
   border-top: 1px solid rgb(180, 180, 180);
-  }
+}
 
 .footer a {
   padding: 10px;
