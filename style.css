@@ -12,13 +12,13 @@
 
 body {
   background-color: lightgray;
+  width: 100%;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 375px;
   height: 48px;
   margin: 0;
   padding: 0 25px;
@@ -51,7 +51,7 @@ body {
 }
 
 main {
-  width: 375px;
+  background-color: white;
 }
 
 .headline {
@@ -60,11 +60,11 @@ main {
   flex-direction: column;
   padding: 120px 35px;
   gap: 12px;
-  width: 375px;
   height: 590px;
   background-image: url(images/backgroundimage1.png);
   background-repeat: no-repeat;
   background-position: bottom right;
+  box-shadow: -2px 5px 5px rgba(0, 0, 0, 0.726);
 }
 
 .headlinetitle {
@@ -107,24 +107,14 @@ main {
   border-radius: 8px;
 }
 
-.workssection {
-  display: grid;
-  grid-template-columns: auto;
-}
-
 .worksstart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 120px;
   padding-bottom: 75px;
   gap: 80px;
-  background-color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 .workstitle {
-  width: 327px;
-  height: 0;
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -146,6 +136,12 @@ main {
   text-align: left;
   justify-content: flex-start;
   padding: 0 25px;
+}
+
+.firstprojectpicture {
+  background-image: url(images/backgroundprojects2.png);
+  height: 237px;
+  width: 327px;
 }
 
 .firstproject h2 {
@@ -192,6 +188,9 @@ main {
   width: 124px;
   height: 48px;
   margin: 20px 0;
+  border: 4px solid #ff6b00;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
 }
 
 .firstbuttom:hover {
@@ -209,15 +208,14 @@ main {
 }
 
 .worksprojects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0;
   gap: 24px;
-  width: 375px;
   height: 100%;
   padding-bottom: 150px;
   background-color: white;
+  justify-items: center;
 }
 
 .projects {
@@ -226,6 +224,9 @@ main {
   width: 327px;
   height: 386px;
   background-image: url(images/backgroundprojects.png);
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
 }
 
 .buttons {
@@ -241,6 +242,18 @@ main {
   font-size: 17px;
   line-height: 24px;
   padding: 20px 0;
+  border-bottom-right-radius: 50px;
+}
+
+.buttons:hover {
+  background-color: #ff6a0057;
+  color: #ff6b00;
+  transition-duration: 1s;
+}
+  
+.buttons:active {
+  background-color: red;
+  color: white;
 }
 
 .projects h2 {
@@ -265,7 +278,7 @@ main {
   margin: 20px 25px;
 }
 
-.skillsused {
+.skillsused {;
   margin: 0 15px;
 }
 
@@ -286,7 +299,6 @@ main {
 .aboutme {
   display: flex;
   flex-direction: column;
-  width: 375px;
   height: 600px;
   background-color: #1c1a19;
   color: white;
@@ -330,11 +342,29 @@ main {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  border: 4px solid #ff6b00;
+  border-radius: 5px;
+}
+
+.buttom:hover {
+  background-color: #ff6a0057;
+  color: #ff6b00;
+  border: 4px solid #ff6b00;
+  transition-duration: 1s;
+}
+  
+.buttom:active {
+  background-color: rgb(255, 0, 0);
+  transform: scale(0.9);
+  border: 4px solid red;
+  color: white;
 }
 
 .divisor {
-  margin: 10px;
-  padding-bottom: 75px;
+  margin: auto;
+  padding-top: 20px;
+  border-bottom: 3px solid grey;
+  width: 350px;;
 }
 
 .skills {
@@ -427,30 +457,6 @@ main {
   padding: 20px;
 }
 
-.buttom:hover {
-  background-color: #ff6a0057;
-  color: #ff6b00;
-  border: 4px solid #ff6b00;
-  transition-duration: 1s;
-}
-
-.buttons:hover {
-  background-color: #ff6a0057;
-  color: #ff6b00;
-  transition-duration: 1s;
-}
-
-.buttons:active {
-  background-color: red;
-}
-
-.buttom:active {
-  background-color: rgb(255, 0, 0);
-  transform: scale(0.9);
-  border: 4px solid red;
-  color: white;
-}
-
 .finalbuttom {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -461,8 +467,9 @@ main {
   gap: 10px;
   background-color: #ff6b00;
   color: white;
-  border: none;
-  border: 4px solid white;
+  border: 4px solid #ff6b00;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
 }
 
 .finalbuttom:hover {
@@ -482,17 +489,174 @@ main {
 footer {
   text-align: center;
   background-color: white;
-  width: 375px;
 }
 
 .footer {
   padding-top: 25px;
   background-color: white;
   height: 65px;
-  width: 375px;
   border-top: 1px solid rgb(180, 180, 180);
 }
 
 .footer a {
   padding: 10px;
 }
+
+ul {
+  list-style-type: none;
+}
+
+/*
+.test {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 600px;
+    margin-top: 20px;
+}
+.box1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: blue;
+}
+.box2 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background-color: red;
+}
+.box3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 3/4;
+    background-color: green;
+}
+.box4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-color: yellow;
+}
+.box5 {
+    grid-area: 1 / 3;
+    background-color: purple;
+}
+.box6 {
+    grid-area: 3 / 1;
+    background-color: orange;
+}
+
+.flextest {
+    height: 600px;
+    display: flex;
+    background-color: black;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 35px;
+}
+.flexbox1 {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+}
+.flexbox2 {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+}
+.flexbox3 {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+}
+.flexbox4 {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+}
+.flexbox5 {
+  background-color: purple;
+  height: 200px;
+  width: 200px;
+}*/
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 700px) {
+  .worksprojects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding: 0 75px;
+  }
+
+  .worksstart {
+    padding-top: 120px;
+    padding-bottom: 75px;
+    padding-left: 75px;
+    text-align: left;
+  }
+  .firstproject {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 75px;
+  }
+  .firstprojecttexts {
+    width: 400px;
+    padding-left: 25px;
+  }
+  .aboutmeskills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    padding: 0 75px;
+  }
+  .formulary {
+    display: flex;
+    justify-content: center;
+  }
+  .formulary h2 {
+    width: 330px;
+    text-align: left;
+  }
+  .headlineitems {
+    width: 550px;
+  }
+  .finalbuttom {
+    margin: auto;
+    text-align: center;
+  }
+  .divisor {
+    width: 650px;
+  }
+}
+
+@media all and (min-width: 1100px) {
+  .worksprojects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+  .headline {
+    background-image: url(Illustration-header.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  .firstprojectpicture {
+    background-image: url(images/Img\ Placeholder\ \(3\).png);
+    height: 448px;
+    width: 684px;
+  }
+}
+
+/* TESTS */ 
+
