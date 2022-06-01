@@ -333,7 +333,7 @@ main {
   font-weight: 400;
   font-size: 72px;
   line-height: 88px;
-  margin: 10px 25px; 
+  margin: 10px 25px;
   margin-top: 100px;
 }
 
@@ -400,8 +400,8 @@ main {
   height: 15px;
   width: 15px;
   transform: rotate(45deg);
-
 }
+
 .sign2 {
   background-color: #ff6b00;
   height: 15px;
@@ -455,7 +455,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0 1rem;
 }
 
@@ -463,17 +463,16 @@ main {
 .form textarea {
   display: block;
   border: none;
-  border-bottom: 1px solid #DBD8D7; 
+  border-bottom: 1px solid #dbd8d7;
   margin: 10px 0;
   width: 327px;
   padding: 20px;
   color: black;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-
 }
 
 .form input::placeholder {
@@ -570,6 +569,10 @@ ul {
 
   .worksstart {
     flex-direction: row;
+    padding-top: 120px;
+    padding-bottom: 75px;
+    padding-left: 230px;
+    text-align: left;
   }
 
   .worksstart .border {
@@ -589,13 +592,6 @@ ul {
     justify-content: center;
     padding: 0 75px;
     padding-bottom: 150px;
-  }
-
-  .worksstart {
-    padding-top: 120px;
-    padding-bottom: 75px;
-    padding-left: 230px;
-    text-align: left;
   }
 
   .firstproject {
@@ -620,8 +616,8 @@ ul {
     font-size: 20px;
     line-height: 32px;
   }
-  
-  .aboutmeskills{
+
+  .aboutmeskills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -629,13 +625,17 @@ ul {
     padding: 0 75px;
   }
 
-.aboutmeskills ul {
-  text-align: left;
-}
+  .aboutmeskills ul {
+    text-align: left;
+  }
 
   .formulary {
     display: flex;
     justify-content: center;
+  }
+
+  .form {
+    align-items: flex-start;
   }
 
   .paragraph {
@@ -702,4 +702,3 @@ ul {
     width: 1100px;
   }
 }
-
