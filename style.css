@@ -12,13 +12,13 @@
 
 body {
   background-color: lightgray;
+  width: 100%;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 375px;
   height: 48px;
   margin: 0;
   padding: 0 25px;
@@ -51,7 +51,7 @@ body {
 }
 
 main {
-  width: 375px;
+  background-color: white;
 }
 
 .headline {
@@ -60,11 +60,11 @@ main {
   flex-direction: column;
   padding: 120px 35px;
   gap: 12px;
-  width: 375px;
   height: 590px;
   background-image: url(images/backgroundimage1.png);
   background-repeat: no-repeat;
   background-position: bottom right;
+  box-shadow: -2px 5px 5px rgba(0, 0, 0, 0.726);
 }
 
 .headlinetitle {
@@ -107,24 +107,17 @@ main {
   border-radius: 8px;
 }
 
-.workssection {
-  display: grid;
-  grid-template-columns: auto;
-}
-
 .worksstart {
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 0 25px;
   padding-top: 120px;
   padding-bottom: 75px;
-  gap: 80px;
-  background-color: rgb(255, 255, 255);
+  gap: 20px;
 }
 
 .workstitle {
-  width: 327px;
-  height: 0;
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -133,7 +126,7 @@ main {
   color: #212121;
 }
 
-.worksstart img {
+.worksstart .border {
   width: 327px;
   height: 0;
   border-bottom: 1px solid #212121;
@@ -146,6 +139,13 @@ main {
   text-align: left;
   justify-content: flex-start;
   padding: 0 25px;
+  height: 100%;
+}
+
+.firstprojectpicture {
+  background-image: url(images/backgroundprojects2.png);
+  height: 237px;
+  width: 327px;
 }
 
 .firstproject h2 {
@@ -185,39 +185,49 @@ main {
 
 .firstbuttom {
   background: #ff6b00;
-  border: none;
   color: white;
-  padding: 12px;
-  gap: 10px;
   width: 124px;
   height: 48px;
   margin: 20px 0;
+  border: 2px solid #ff6b00;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
 }
 
 .firstbuttom:hover {
-  background-color: #ff6a0057;
+  background-color: #fff5e1;
   color: #ff6b00;
   transition-duration: 1s;
-  border: 4px solid #ff6b00;
 }
 
 .firstbuttom:active {
-  background-color: rgb(255, 0, 0);
+  background-color: #e05304;
   transform: scale(0.9);
-  border: 4px solid red;
+  border: 2px solid #e05304;
   color: white;
 }
 
+.firstbuttom:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
+}
+
 .worksprojects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 327px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0;
   gap: 24px;
-  width: 375px;
   height: 100%;
   padding-bottom: 150px;
   background-color: white;
+  justify-items: center;
 }
 
 .projects {
@@ -226,6 +236,9 @@ main {
   width: 327px;
   height: 386px;
   background-image: url(images/backgroundprojects.png);
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
 }
 
 .buttons {
@@ -237,10 +250,27 @@ main {
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   padding: 20px 0;
+  border-bottom-right-radius: 50px;
+}
+
+.buttons:hover {
+  background-color: #fff5e1;
+  color: #ff6b00;
+  transition-duration: 1s;
+}
+
+.buttons:active {
+  background-color: #e05304;
+  color: white;
+}
+
+.buttons:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
 }
 
 .projects h2 {
@@ -286,7 +316,6 @@ main {
 .aboutme {
   display: flex;
   flex-direction: column;
-  width: 375px;
   height: 600px;
   background-color: #1c1a19;
   color: white;
@@ -330,23 +359,65 @@ main {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  border: 2px solid #ff6b00;
+  border-radius: 5px;
 }
 
-.divisor {
-  margin: 10px;
-  padding-bottom: 75px;
+.buttom:hover {
+  background-color: #fff5e1;
+  color: #ff6b00;
+  border: 2px solid #ff6b00;
+  transition-duration: 1s;
+}
+
+.buttom:active {
+  background-color: #e05304;
+  transform: scale(0.9);
+  border: 2px solid #e05304;
+  color: white;
+}
+
+.buttom:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
+}
+
+.signs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sign {
+  background-color: #ff6b00;
+  height: 15px;
+  width: 15px;
+}
+
+.sign1 {
+  background-color: #ff6b00;
+  height: 15px;
+  width: 15px;
+  transform: rotate(45deg);
+}
+
+.sign2 {
+  background-color: #ff6b00;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
 }
 
 .skills {
   color: white;
   text-align: center;
   background-color: #1c1a19;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 
 .skills h2 {
   color: white;
-  padding-top: 30px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -356,7 +427,7 @@ main {
 
 .skills h3 {
   color: rgb(226, 226, 226);
-  padding-top: 30px;
+  padding-top: 25px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -365,12 +436,12 @@ main {
 }
 
 .formulary {
-  background-color: white;
+  background-color: #e5e5e5;
   text-align: center;
   padding: 100px 30px;
 }
 
-.formulary h2 {
+.paragraph {
   color: #172b4d;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -382,26 +453,30 @@ main {
 
 .form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .form input,
 .form textarea {
   display: block;
   border: none;
-  border-bottom: 1px solid rgb(207, 207, 207);
-  line-height: 10px;
+  border-bottom: 1px solid #dbd8d7;
   margin: 10px 0;
   width: 327px;
   padding: 20px;
   color: black;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
 }
 
 .form input::placeholder {
-  color: rgb(172, 172, 172);
+  color: #979493;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -424,31 +499,7 @@ main {
   margin-bottom: 25px;
   height: 114px;
   width: 327px;
-  padding: 20px;
-}
-
-.buttom:hover {
-  background-color: #ff6a0057;
-  color: #ff6b00;
-  border: 4px solid #ff6b00;
-  transition-duration: 1s;
-}
-
-.buttons:hover {
-  background-color: #ff6a0057;
-  color: #ff6b00;
-  transition-duration: 1s;
-}
-
-.buttons:active {
-  background-color: red;
-}
-
-.buttom:active {
-  background-color: rgb(255, 0, 0);
-  transform: scale(0.9);
-  border: 4px solid red;
-  color: white;
+  padding: 20px 10px;
 }
 
 .finalbuttom {
@@ -461,38 +512,193 @@ main {
   gap: 10px;
   background-color: #ff6b00;
   color: white;
-  border: none;
-  border: 4px solid white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
+  border: 2px solid #ff6b00;
 }
 
 .finalbuttom:hover {
-  background-color: #ff6a0058;
+  background-color: #fff5e1;
   color: #ff6b00;
   transition-duration: 1s;
-  border: 4px solid #ff6b00;
+  border: 2px solid #ff6b00;
 }
 
 .finalbuttom:active {
-  background-color: rgb(255, 0, 0);
+  background-color: #e05304;
   transform: scale(0.9);
-  border: 4px solid red;
+  border: 2px solid #e05304;
   color: white;
+}
+
+.finalbuttom:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
 }
 
 footer {
   text-align: center;
   background-color: white;
-  width: 375px;
 }
 
 .footer {
   padding-top: 25px;
   background-color: white;
-  height: 65px;
-  width: 375px;
+  height: 72px;
   border-top: 1px solid rgb(180, 180, 180);
 }
 
 .footer a {
   padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.test1 {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (min-width: 1000px) {
+  .headline {
+    padding: 120px 230px;
+  }
+
+  .worksstart {
+    flex-direction: row;
+    padding-top: 120px;
+    padding-bottom: 75px;
+    padding-left: 230px;
+    text-align: left;
+  }
+
+  .worksstart .border {
+    height: 30px;
+    width: 400px;
+  }
+
+  .firstprojectpicture {
+    min-width: 327px;
+  }
+
+  .worksprojects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    padding: 0 75px;
+    padding-bottom: 150px;
+  }
+
+  .firstproject {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 25px;
+    padding: 0 230px;
+    background-color: white;
+  }
+
+  .aboutme {
+    padding: 50px 200px;
+  }
+
+  .aboutme > p {
+    width: 566px;
+    height: 148px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .aboutmeskills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    padding: 0 75px;
+  }
+
+  .aboutmeskills ul {
+    text-align: left;
+  }
+
+  .formulary {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form {
+    align-items: flex-start;
+  }
+
+  .paragraph {
+    width: 330px;
+    text-align: left;
+  }
+
+  .headlineitems {
+    width: 550px;
+  }
+
+  .finalbuttom {
+    margin: auto;
+    text-align: center;
+  }
+
+  .divisor {
+    width: 650px;
+  }
+}
+
+@media all and (min-width: 1360px) {
+  .worksstart {
+    padding-left: 230px;
+  }
+
+  .worksstart .border {
+    width: 700px;
+  }
+
+  .worksprojects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .headline {
+    background-image: url(Illustration-header.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  .firstproject {
+    padding: 0 230px;
+  }
+
+  .firstprojectpicture {
+    background-image: url(images/firstprojectbig.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 448px;
+    min-width: 684px;
+  }
+
+  .aboutme {
+    background-image: url(images/aboutmebackground.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: bottom right;
+  }
+
+  .divisor {
+    width: 1100px;
+  }
 }
