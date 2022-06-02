@@ -60,7 +60,7 @@ header {
 
 .menupartdesktop a {
   color: white;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -68,7 +68,7 @@ header {
 }
 
 main {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .headline {
@@ -86,7 +86,6 @@ main {
 
 .headlinetitle {
   color: #ff6b00;
-  width: 327px;
   height: 124px;
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
@@ -119,7 +118,6 @@ main {
 
 .icons {
   padding: 0;
-  width: 200px;
   height: 40px;
   width: 327px;
   margin: auto;
@@ -133,7 +131,7 @@ main {
 }
 
 .worksstart {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: flex;
   flex-direction: column;
   padding: 0 25px;
@@ -160,7 +158,7 @@ main {
 }
 
 .firstproject {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -199,7 +197,6 @@ main {
 .skillsused2 li {
   display: inline;
   width: 295px;
-    
   color: #091e42;
   border: 1px solid #8993a4;
   padding: 5px 10px;
@@ -254,7 +251,7 @@ main {
   gap: 24px;
   height: 100%;
   padding-bottom: 150px;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   justify-items: center;
 }
 
@@ -425,7 +422,7 @@ main {
 }
 
 .borderabout2 {
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #fff;
   width: 324px;
   margin: auto;
 }
@@ -615,11 +612,12 @@ ul {
 @media all and (min-width: 1000px) {
   .container {
     /* background-color: blue; */
-    
+
     width: 700px;
     margin: auto;
     padding: 0;
   }
+
   .menu {
     width: 300px;
     height: 40px;
@@ -734,12 +732,12 @@ ul {
 
   .firstproject {
     /* background-color: orange; */
-    
+
     display: flex;
     flex-direction: row;
     justify-content: start;
     gap: 25px;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     margin: auto;
     width: 700px;
     padding-left: 0;
@@ -826,7 +824,6 @@ ul {
     font-weight: 400;
     font-size: 72px;
     line-height: 82px;
-    margin-bottom: 120px;
     width: 450px;
     margin: 0;
   }
@@ -940,7 +937,7 @@ ul {
   .paragraph {
     width: 455px;
     height: 256px;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
