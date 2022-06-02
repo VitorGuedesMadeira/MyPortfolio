@@ -8,21 +8,25 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  transition-duration: 0.3s;
 }
 
 body {
-  background-color: lightgray;
   width: 100%;
+}
+
+header {
+  background-color: #3e3c3c;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.7);
   height: 48px;
-  margin: 0;
   padding: 0 25px;
   align-items: center;
+  width: 375px;
+  margin: auto;
 }
 
 .logobox {
@@ -50,8 +54,21 @@ body {
   height: 12px;
 }
 
+.menupartdesktop {
+  display: none;
+}
+
+.menupartdesktop a {
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+
 main {
-  background-color: white;
+  background-color: #E5E5E5;
 }
 
 .headline {
@@ -77,6 +94,8 @@ main {
   font-size: 56px;
   line-height: 64px;
   letter-spacing: 0.37px;
+  width: 327px;
+  margin: auto;
 }
 
 .subtitle {
@@ -84,6 +103,8 @@ main {
   padding-bottom: 10px;
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
+  width: 327px;
+  margin: auto;
 }
 
 .headline p {
@@ -92,12 +113,16 @@ main {
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
+  width: 327px;
+  margin: auto;
 }
 
 .icons {
   padding: 0;
   width: 200px;
   height: 40px;
+  width: 327px;
+  margin: auto;
 }
 
 .icons a {
@@ -108,7 +133,7 @@ main {
 }
 
 .worksstart {
-  background-color: white;
+  background-color: #E5E5E5;
   display: flex;
   flex-direction: column;
   padding: 0 25px;
@@ -124,22 +149,25 @@ main {
   font-size: 40px;
   line-height: 52px;
   color: #212121;
+  margin: auto;
 }
 
 .worksstart .border {
   width: 327px;
   height: 0;
   border-bottom: 1px solid #212121;
+  margin: auto;
 }
 
 .firstproject {
-  background-color: white;
+  background-color: #E5E5E5;
   display: flex;
   flex-direction: column;
   text-align: left;
   justify-content: flex-start;
   padding: 0 25px;
-  height: 100%;
+  width: 375px;
+  margin: auto;
 }
 
 .firstprojectpicture {
@@ -171,7 +199,7 @@ main {
 .skillsused2 li {
   display: inline;
   width: 295px;
-  background-color: white;
+    
   color: #091e42;
   border: 1px solid #8993a4;
   padding: 5px 10px;
@@ -226,7 +254,7 @@ main {
   gap: 24px;
   height: 100%;
   padding-bottom: 150px;
-  background-color: white;
+  background-color: #E5E5E5;
   justify-items: center;
 }
 
@@ -324,6 +352,15 @@ main {
   background-position: bottom right;
 }
 
+.aboutmestuff {
+  width: 327px;
+  margin: auto;
+}
+
+.ulabout {
+  padding-bottom: 50px;
+}
+
 .aboutme h1 {
   color: #ff6b00;
   width: 327px;
@@ -333,18 +370,18 @@ main {
   font-weight: 400;
   font-size: 72px;
   line-height: 88px;
-  margin: 10px 25px;
   margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 .aboutme p {
-  margin: 10px 25px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 16px;
   line-height: 24px;
   color: #f4f5f7;
+  margin-bottom: 20px;
 }
 
 .buttom {
@@ -352,7 +389,6 @@ main {
   width: 161px;
   height: 48px;
   background: #ff6b00;
-  margin-left: 25px;
   color: white;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -361,6 +397,7 @@ main {
   line-height: 24px;
   border: 2px solid #ff6b00;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .buttom:hover {
@@ -380,6 +417,17 @@ main {
 .buttom:disabled {
   background-color: #f4f1f0;
   color: #5b5957;
+}
+
+.borderabout1 {
+  background-color: #1c1a19;
+  padding-top: 20px;
+}
+
+.borderabout2 {
+  border-bottom: 1px solid #FFFFFF;
+  width: 324px;
+  margin: auto;
 }
 
 .signs {
@@ -449,6 +497,8 @@ main {
   font-size: 32px;
   line-height: 44px;
   padding-bottom: 25px;
+  width: 324px;
+  margin: auto;
 }
 
 .form {
@@ -563,16 +613,104 @@ ul {
 /* MEDIA QUERIES */
 
 @media all and (min-width: 1000px) {
+  .container {
+    /* background-color: blue; */
+    
+    width: 700px;
+    margin: auto;
+    padding: 0;
+  }
+  .menu {
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  .menupartlogo {
+    display: none;
+  }
+
+  .menupartdesktop {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+
   .headline {
-    padding: 120px 230px;
+    padding: 0;
+    min-height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    background-position: center right;
+  }
+
+  .headlineitems {
+    /* background-color: yellow; */
+
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 600px;
+    align-content: center;
+    justify-content: flex-start;
+    margin: auto;
+    width: 700px;
+  }
+
+  .headlinetexts {
+    /* background-color: green; */
+
+    padding: 100px 0;
+    order: 2;
+    height: 600px;
+    width: 100%;
+  }
+
+  .icons {
+    /* background-color: red; */
+
+    order: 1;
+    height: 312px;
+    width: auto;
+    margin-top: 180px;
+    margin-right: 50px;
+  }
+
+  .icons a {
+    display: block;
+    margin: auto;
+  }
+
+  .headlinetexts {
+    margin: auto;
+  }
+
+  .subtitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .headlinetexts p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   .worksstart {
+    /* background-color: blue; */
+
     flex-direction: row;
     padding-top: 120px;
-    padding-bottom: 75px;
-    padding-left: 230px;
     text-align: left;
+    width: 700px;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .workstitle {
+    width: 330px;
   }
 
   .worksstart .border {
@@ -595,19 +733,26 @@ ul {
   }
 
   .firstproject {
+    /* background-color: orange; */
+    
     display: flex;
     flex-direction: row;
     justify-content: start;
     gap: 25px;
-    padding: 0 230px;
-    background-color: white;
+    background-color: #E5E5E5;
+    margin: auto;
+    width: 700px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .aboutme {
-    padding: 50px 200px;
+  .aboutmestuff {
+    /* background-color: green; */
+
+    width: 700px;
   }
 
-  .aboutme > p {
+  .aboutme p {
     width: 566px;
     height: 148px;
     font-family: 'Inter', sans-serif;
@@ -617,12 +762,21 @@ ul {
     line-height: 32px;
   }
 
+  .borderabout2 {
+    width: 700px;
+  }
+
   .aboutmeskills {
+    /* background-color: red; */
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    padding: 0 75px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: flex-start;
+    padding: 0;
+    gap: 50px;
+    width: 700px;
+    margin: auto;
   }
 
   .aboutmeskills ul {
@@ -630,21 +784,22 @@ ul {
   }
 
   .formulary {
+    /* background-color: blue; */
+
     display: flex;
     justify-content: center;
+    margin: auto;
+    width: 700px;
   }
 
   .form {
     align-items: flex-start;
+    margin-top: 45px;
   }
 
   .paragraph {
     width: 330px;
     text-align: left;
-  }
-
-  .headlineitems {
-    width: 550px;
   }
 
   .finalbuttom {
@@ -658,8 +813,50 @@ ul {
 }
 
 @media all and (min-width: 1360px) {
+  .container {
+    /* background-color: green; */
+
+    width: 1030px;
+    margin: auto;
+  }
+
+  .headlinetitle {
+    font-family: 'Crete Round', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 82px;
+    margin-bottom: 120px;
+    width: 450px;
+    margin: 0;
+  }
+
+  .headlineitems {
+    /* background-color: yellow; */
+
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 600px;
+    align-content: center;
+    justify-content: flex-start;
+    margin: auto;
+    width: 1030px;
+  }
+
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    width: 550px;
+    margin-top: 50px;
+  }
+
   .worksstart {
-    padding-left: 230px;
+    /* background-color: purple; */
+
+    width: 1030px;
   }
 
   .worksstart .border {
@@ -679,8 +876,15 @@ ul {
     background-position: bottom right;
   }
 
+  .headlinetexts p {
+    width: 550px;
+  }
+
   .firstproject {
-    padding: 0 230px;
+    /* background-color: green; */
+
+    width: 1030px;
+    padding-bottom: 20px;
   }
 
   .firstprojectpicture {
@@ -694,11 +898,58 @@ ul {
   .aboutme {
     background-image: url(images/aboutmebackground.png);
     background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: bottom right;
+    background-size: 40%;
+    background-position: 100% 50%;
+  }
+
+  .aboutmeskills {
+    /* background-color: blue; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: flex-start;
+    padding: 0;
+    width: 1030px;
+    margin: auto;
+  }
+
+  .aboutmestuff {
+    /* background-color: blue; */
+
+    width: 1030px;
+  }
+
+  .aboutmestuff p {
+    width: 500px;
+  }
+
+  .borderabout2 {
+    width: 1030px;
   }
 
   .divisor {
     width: 1100px;
+  }
+
+  .form {
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+  .paragraph {
+    width: 455px;
+    height: 256px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .formulary {
+    /* background-color: yellow; */
+
+    width: 1030px;
   }
 }
