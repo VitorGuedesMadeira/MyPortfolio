@@ -68,7 +68,7 @@ header {
 }
 
 main {
-  background-color: #e5e5e5;
+  background-color: white;
 }
 
 .headline {
@@ -80,8 +80,7 @@ main {
   height: 590px;
   background-image: url(images/backgroundimage1.png);
   background-repeat: no-repeat;
-  background-position: bottom right;
-  box-shadow: -2px 5px 5px rgba(0, 0, 0, 0.726);
+  background-position: bottom right;  
 }
 
 .headlinetitle {
@@ -131,7 +130,7 @@ main {
 }
 
 .worksstart {
-  background-color: #e5e5e5;
+  background-color: white;
   display: flex;
   flex-direction: column;
   padding: 0 25px;
@@ -158,7 +157,7 @@ main {
 }
 
 .firstproject {
-  background-color: #e5e5e5;
+  background-color: white;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -251,7 +250,7 @@ main {
   gap: 24px;
   height: 100%;
   padding-bottom: 150px;
-  background-color: #e5e5e5;
+  background-color: white;
   justify-items: center;
 }
 
@@ -481,7 +480,7 @@ main {
 }
 
 .formulary {
-  background-color: #e5e5e5;
+  background-color: white;
   text-align: center;
   padding: 100px 30px;
 }
@@ -661,6 +660,7 @@ ul {
     order: 2;
     height: 600px;
     width: 100%;
+    margin: auto;
   }
 
   .icons {
@@ -675,10 +675,6 @@ ul {
 
   .icons a {
     display: block;
-    margin: auto;
-  }
-
-  .headlinetexts {
     margin: auto;
   }
 
@@ -737,7 +733,7 @@ ul {
     flex-direction: row;
     justify-content: start;
     gap: 25px;
-    background-color: #e5e5e5;
+    background-color: white;
     margin: auto;
     width: 700px;
     padding-left: 0;
