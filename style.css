@@ -92,7 +92,7 @@ main {
   background-image: url(images/pexels-photo-2091399.webp);
   background-repeat: no-repeat;
   background-position: 500% 50%;
-  background-size: 90%;  
+  background-size: 90%;
   border-bottom-left-radius: 10%;
 }
 
@@ -245,9 +245,8 @@ main {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  box-shadow:
-  0 0 7px #8a2be2,
-  0 0 42px #8a2be2;
+  box-shadow: 0 0 7px #8a2be2, 
+    0 0 42px #8a2be2;
   transition-duration: 0.1s;
 }
 
@@ -256,9 +255,8 @@ main {
   background-color: white;
   color: #8a2be2;
   transform: scale(1.03);
-  box-shadow:
-  0 0 7px #8a2be2,
-  0 0 42px #8a2be2;
+  box-shadow: 0 0 7px #8a2be2,
+    0 0 42px #8a2be2;
 }
 
 .firstbuttom:active {
@@ -266,9 +264,8 @@ main {
   transform: scale(0.9);
   border: 2px solid #8a2be2;
   color: white;
-  box-shadow:
-  0 0 7px #8a2be2,
-  0 0 42px #8a2be2;
+  box-shadow: 0 0 7px #8a2be2,
+    0 0 42px #8a2be2;
 }
 
 .firstbuttom:disabled {
@@ -315,6 +312,15 @@ main {
 
 .projects:hover {
   transform: scale(1.05);
+}
+
+.skills h2 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
 }
 
 .projects h2:hover {
@@ -445,9 +451,8 @@ main {
   border: 2px solid #8a2be2;
   border-radius: 5px;
   margin-bottom: 20px;
-  box-shadow:
-  0 0 7px #8a2be2,
-  0 0 42px #8a2be2;
+  box-shadow: 0 0 7px #8a2be2,
+    0 0 42px #8a2be2;
 }
 
 .buttom:hover {
@@ -456,9 +461,8 @@ main {
   border: 2px solid white;
   transition-duration: 1s;
   transform: scale(1.03);
-  box-shadow:
-  0 0 7px #fff,
-  0 0 42px #8a2be2;
+  box-shadow: 0 0 7px #fff,
+    0 0 42px #8a2be2;
 }
 
 .buttom:active {
@@ -516,15 +520,6 @@ main {
   text-align: center;
   background-color: black;
   padding: 100px 0;
-}
-
-.skills h2 {
-  color: white;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
 }
 
 .skills h3 {
@@ -626,9 +621,8 @@ main {
   color: white;
   border-radius: 5px;
   border: 2px solid #8a2be2;
-  box-shadow:
-  0 0 7px #8a2be2,
-  0 0 42px #8a2be2;
+  box-shadow: 0 0 7px #8a2be2,
+    0 0 42px #8a2be2;
 }
 
 .finalbuttom:hover,
@@ -676,11 +670,10 @@ footer {
 
 .icons a:hover {
   transform: scale(1.5);
-  box-shadow:
-  0 0 10px #fff,
-  0 0 21px #fff,
-  0 0 42px #3cb9fc,
-  0 0 82px #3cb9fc;
+  box-shadow: 0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #3cb9fc,
+    0 0 82px #3cb9fc;
 }
 
 .footer img:hover {
