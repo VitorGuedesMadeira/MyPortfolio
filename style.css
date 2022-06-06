@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  transition-duration: 0.3s;
+  transition-duration: 1s;
 }
 
 body {
@@ -16,7 +16,10 @@ body {
 }
 
 header {
-  background-color: #3e3c3c;
+  background-image: linear-gradient(to bottom, #3e3c3c 90%, transparent);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .container {
@@ -49,6 +52,20 @@ header {
   border-radius: 8px;
 }
 
+.hoverlogo:hover {
+  transform: scale(1.1);
+}
+
+.logobox:hover {
+  transform: scale(1.05);
+}
+
+.menupartdesktop a:hover {
+  border-bottom: 1px solid white;
+  color: white;
+  transform: scale(1.05);
+}
+
 .menupart {
   width: 18px;
   height: 12px;
@@ -66,25 +83,31 @@ header {
   font-size: 15px;
   line-height: 20px;
 }
+/*
+.menupartdesktop img {
+  filter: invert(43%) sepia(91%) saturate(2003%) hue-rotate(360deg) brightness(102%) contrast(107%);
+}*/
 
 main {
   background-color: white;
 }
 
 .headline {
-  background-color: #1c1a19;
+  background-color: black;
   display: flex;
   flex-direction: column;
   padding: 120px 35px;
   gap: 12px;
   height: 590px;
-  background-image: url(images/backgroundimage1.png);
+  background-image: url(images/pexels-photo-2091399.webp);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: 500% 50%;
+  background-size: 90%;  
+  border-bottom-left-radius: 10%;
 }
 
 .headlinetitle {
-  color: #ff6b00;
+  color: white;
   height: 124px;
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
@@ -120,13 +143,23 @@ main {
   height: 40px;
   width: 327px;
   margin: auto;
+  margin-top: 25px;
 }
 
 .icons a {
-  padding: 8px;
+  padding: 10px;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 50px;
+}
+
+.icons a:hover {
+  transform: scale(1.5);
+  box-shadow:
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #3cb9fc,
+  0 0 82px #3cb9fc;
 }
 
 .worksstart {
@@ -168,9 +201,19 @@ main {
 }
 
 .firstprojectpicture {
-  background-image: url(images/backgroundprojects2.png);
+  background-color: black;
+  background-image: url(images/neonpicturefirstproject.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 10px;
   height: 237px;
   width: 327px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
+}
+
+.firstprojectpicture:hover {
+  transform: scale(1.03);
 }
 
 .firstproject h2 {
@@ -207,13 +250,17 @@ main {
   line-height: 20px;
 }
 
+.skillsused2 li:hover {
+  background-color: #892be258;
+}
+
 .firstbuttom {
-  background: #ff6b00;
+  background: #8a2be2;
   color: white;
   width: 124px;
   height: 48px;
   margin: 20px 0;
-  border: 2px solid #ff6b00;
+  border: 2px solid #8a2be2;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
   font-family: 'Inter', sans-serif;
@@ -221,19 +268,30 @@ main {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  box-shadow:
+  0 0 7px #8a2be2,
+  0 0 42px #8a2be2;
+  transition-duration: 0.1s;
 }
 
 .firstbuttom:hover {
-  background-color: #fff5e1;
-  color: #ff6b00;
-  transition-duration: 1s;
+  transition-duration: 0.1s;
+  background-color: white;
+  color: #8a2be2;
+  transform: scale(1.03);
+  box-shadow:
+  0 0 7px #8a2be2,
+  0 0 42px #8a2be2;
 }
 
 .firstbuttom:active {
-  background-color: #e05304;
+  background-color: #8a2be2;
   transform: scale(0.9);
-  border: 2px solid #e05304;
+  border: 2px solid #8a2be2;
   color: white;
+  box-shadow:
+  0 0 7px #8a2be2,
+  0 0 42px #8a2be2;
 }
 
 .firstbuttom:disabled {
@@ -260,14 +318,23 @@ main {
   width: 327px;
   height: 386px;
   background-image: url(images/backgroundprojects.png);
+  border-radius: 5px;
   border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
+  transition-duration: 1s;
+}
+
+.projects:hover {
+  transform: scale(1.05);
+}
+
+.projects h2:hover {
+  color: #8a2be2;
 }
 
 .buttons {
   width: 327px;
-  background: #ff6b00;
+  background-image: radial-gradient(circle at 50%, #120052 10%, black);
   border: none;
   margin-top: 35px;
   color: white;
@@ -278,17 +345,18 @@ main {
   font-size: 17px;
   line-height: 24px;
   padding: 20px 0;
+  border-radius: 5px;
   border-bottom-right-radius: 50px;
 }
 
 .buttons:hover {
   background-color: #fff5e1;
-  color: #ff6b00;
+  background-image: radial-gradient(circle at 50%, #8a2be2, black);
   transition-duration: 1s;
 }
 
 .buttons:active {
-  background-color: #e05304;
+  background-color: #8a2be2;
   color: white;
 }
 
@@ -341,11 +409,13 @@ main {
   display: flex;
   flex-direction: column;
   height: 600px;
-  background-color: #1c1a19;
+  background-color: black;
   color: white;
-  background-image: url(images/backgroundimage3.png);
+  background-image: url(images/pexels-sebastiaan-stam-1482480.jpg);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-size: 75%;
+  background-position: 200% 100%;
+  border-top-right-radius: 10%;
 }
 
 .aboutmestuff {
@@ -358,7 +428,7 @@ main {
 }
 
 .aboutme h1 {
-  color: #ff6b00;
+  color: white;
   width: 327px;
   height: 79px;
   font-family: 'Crete Round', sans-serif;
@@ -384,29 +454,36 @@ main {
   gap: 10px;
   width: 161px;
   height: 48px;
-  background: #ff6b00;
+  background: #8a2be2;
   color: white;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  border: 2px solid #ff6b00;
+  border: 2px solid #8a2be2;
   border-radius: 5px;
   margin-bottom: 20px;
+  box-shadow:
+  0 0 7px #8a2be2,
+  0 0 42px #8a2be2;
 }
 
 .buttom:hover {
   background-color: #fff5e1;
-  color: #ff6b00;
-  border: 2px solid #ff6b00;
+  color: #8a2be2;
+  border: 2px solid white;
   transition-duration: 1s;
+  transform: scale(1.03);
+  box-shadow:
+  0 0 7px #fff,
+  0 0 42px #8a2be2;
 }
 
 .buttom:active {
-  background-color: #e05304;
+  background-color: #8a2be2;
   transform: scale(0.9);
-  border: 2px solid #e05304;
+  border: 2px solid #8a2be2;
   color: white;
 }
 
@@ -416,7 +493,7 @@ main {
 }
 
 .borderabout1 {
-  background-color: #1c1a19;
+  background-color: black;
   padding-top: 20px;
 }
 
@@ -434,20 +511,20 @@ main {
 }
 
 .sign {
-  background-color: #ff6b00;
+  background-color: #8a2be2;
   height: 15px;
   width: 15px;
 }
 
 .sign1 {
-  background-color: #ff6b00;
+  background-color: #8a2be2;
   height: 15px;
   width: 15px;
   transform: rotate(45deg);
 }
 
 .sign2 {
-  background-color: #ff6b00;
+  background-color: #8a2be2;
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -456,7 +533,7 @@ main {
 .skills {
   color: white;
   text-align: center;
-  background-color: #1c1a19;
+  background-color: black;
   padding: 100px 0;
 }
 
@@ -479,8 +556,11 @@ main {
   line-height: 43px;
 }
 
+.formularybody {
+  background-image: linear-gradient(to bottom, black 0%, transparent 30%);
+}
+
 .formulary {
-  background-color: white;
   text-align: center;
   padding: 100px 30px;
 }
@@ -495,6 +575,7 @@ main {
   padding-bottom: 25px;
   width: 324px;
   margin: auto;
+  text-shadow: 0 0 5px blue;
 }
 
 .form {
@@ -519,6 +600,10 @@ main {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+}
+
+.form input:hover {
+  background-color: #fbf8f7;
 }
 
 .form input::placeholder {
@@ -556,24 +641,28 @@ main {
   line-height: 24px;
   padding: 12px;
   gap: 10px;
-  background-color: #ff6b00;
+  background-color: #8a2be2;
   color: white;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.288);
-  border: 2px solid #ff6b00;
+  border: 2px solid #8a2be2;
+  box-shadow:
+  0 0 7px #8a2be2,
+  0 0 42px #8a2be2;
 }
 
-.finalbuttom:hover {
+.finalbuttom:hover,
+.finalbuttom:focus {
   background-color: #fff5e1;
-  color: #ff6b00;
+  color: #8a2be2;
   transition-duration: 1s;
-  border: 2px solid #ff6b00;
+  border: 2px solid #fff5e1;
+  transform: scale(1.03);
 }
 
 .finalbuttom:active {
-  background-color: #e05304;
+  background-color: #8a2be2;
   transform: scale(0.9);
-  border: 2px solid #e05304;
+  border: 2px solid #8a2be2;
   color: white;
 }
 
@@ -598,12 +687,48 @@ footer {
   padding: 10px;
 }
 
+.footer img:hover {
+  transform: rotate(360deg);
+}
+
 ul {
   list-style-type: none;
 }
 
-.test1 {
-  display: none;
+.sign:hover {
+  border-radius: 50%;
+}
+
+.sign1:hover {
+  transform: rotate(90deg);
+}
+
+.sign2:hover {
+  border-radius: 0;
+}
+
+.ulabout li h3:hover {
+  color: #8a2be2;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #3cb9fc,
+    0 0 82px #3cb9fc,
+    0 0 92px #3cb9fc,
+    0 0 102px #3cb9fc,
+    0 0 151px #3cb9fc;
+}
+
+.neonText2 {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 42px #3cb9fc;
 }
 
 /* MEDIA QUERIES */
@@ -638,7 +763,7 @@ ul {
     min-height: 100vh;
     padding-left: 0;
     padding-right: 0;
-    background-position: center right;
+    background-position: 400% 50%;
   }
 
   .headlineitems {
@@ -713,6 +838,11 @@ ul {
   }
 
   .firstprojectpicture {
+    background-color: black;
+    background-image: url(images/neonpicturefirstproject.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    background-position: 50%;
     min-width: 327px;
   }
 
@@ -744,6 +874,10 @@ ul {
     /* background-color: green; */
 
     width: 700px;
+  }
+
+  .aboutme {
+    background-position: 200% 50%;
   }
 
   .aboutme p {
@@ -806,7 +940,7 @@ ul {
   }
 }
 
-@media all and (min-width: 1360px) {
+@media all and (min-width: 1200px) {
   .container {
     /* background-color: green; */
 
@@ -864,9 +998,11 @@ ul {
   }
 
   .headline {
-    background-image: url(Illustration-header.png);
+    background-color: black;
+    background-image: url(images/pexels-photo-2091399.webp);
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: 300% 50%;
+    background-blend-mode: normal;
   }
 
   .headlinetexts p {
@@ -881,18 +1017,27 @@ ul {
   }
 
   .firstprojectpicture {
-    background-image: url(images/firstprojectbig.png);
+    background-color: black;
+    background-image: url(images/neonpicturefirstproject.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 50%;
     height: 448px;
     min-width: 684px;
+    border-radius: 5px;
+  }
+
+  .firstprojectpicture:hover {
+    transform: scale(1.01);
   }
 
   .aboutme {
-    background-image: url(images/aboutmebackground.png);
+    background-color: black;
+    background-image: url(images/pexels-sebastiaan-stam-1482480.jpg);
     background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: 100% 50%;
+    background-size: 70%;
+    background-position: 125% 50%;
+    background-blend-mode: normal;
   }
 
   .aboutmeskills {
