@@ -60,12 +60,6 @@ header {
   transform: scale(1.05);
 }
 
-.menupartdesktop a:hover {
-  border-bottom: 1px solid white;
-  color: white;
-  transform: scale(1.05);
-}
-
 .menupart {
   width: 18px;
   height: 12px;
@@ -83,10 +77,6 @@ header {
   font-size: 15px;
   line-height: 20px;
 }
-/*
-.menupartdesktop img {
-  filter: invert(43%) sepia(91%) saturate(2003%) hue-rotate(360deg) brightness(102%) contrast(107%);
-}*/
 
 main {
   background-color: white;
@@ -151,15 +141,6 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-}
-
-.icons a:hover {
-  transform: scale(1.5);
-  box-shadow:
-  0 0 10px #fff,
-  0 0 21px #fff,
-  0 0 42px #3cb9fc,
-  0 0 82px #3cb9fc;
 }
 
 .worksstart {
@@ -250,10 +231,6 @@ main {
   line-height: 20px;
 }
 
-.skillsused2 li:hover {
-  background-color: #892be258;
-}
-
 .firstbuttom {
   background: #8a2be2;
   color: white;
@@ -324,6 +301,18 @@ main {
   transition-duration: 1s;
 }
 
+.projects h2 {
+  width: 295px;
+  height: 81px;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: white;
+  margin: 0 25px;
+}
+
 .projects:hover {
   transform: scale(1.05);
 }
@@ -365,18 +354,6 @@ main {
   color: #5b5957;
 }
 
-.projects h2 {
-  width: 295px;
-  height: 81px;
-  font-family: 'Crete Round', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 44px;
-  color: white;
-  margin: 0 25px;
-}
-
 .projects p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -403,6 +380,10 @@ main {
   font-size: 15px;
   line-height: 20px;
   display: inline;
+}
+
+.skillsused2 li:hover {
+  background-color: #892be258;
 }
 
 .aboutme {
@@ -687,6 +668,21 @@ footer {
   padding: 10px;
 }
 
+.menupartdesktop a:hover {
+  border-bottom: 1px solid white;
+  color: white;
+  transform: scale(1.05);
+}
+
+.icons a:hover {
+  transform: scale(1.5);
+  box-shadow:
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #3cb9fc,
+  0 0 82px #3cb9fc;
+}
+
 .footer img:hover {
   transform: rotate(360deg);
 }
@@ -841,7 +837,7 @@ ul {
     background-color: black;
     background-image: url(images/neonpicturefirstproject.jpg);
     background-size: 100%;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: 50%;
     min-width: 327px;
   }
