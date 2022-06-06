@@ -245,7 +245,8 @@ main {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  box-shadow: 0 0 7px #8a2be2, 
+  box-shadow:
+    0 0 7px #8a2be2,
     0 0 42px #8a2be2;
   transition-duration: 0.1s;
 }
@@ -255,7 +256,8 @@ main {
   background-color: white;
   color: #8a2be2;
   transform: scale(1.03);
-  box-shadow: 0 0 7px #8a2be2,
+  box-shadow:
+    0 0 7px #8a2be2,
     0 0 42px #8a2be2;
 }
 
@@ -264,7 +266,8 @@ main {
   transform: scale(0.9);
   border: 2px solid #8a2be2;
   color: white;
-  box-shadow: 0 0 7px #8a2be2,
+  box-shadow:
+    0 0 7px #8a2be2,
     0 0 42px #8a2be2;
 }
 
@@ -451,7 +454,8 @@ main {
   border: 2px solid #8a2be2;
   border-radius: 5px;
   margin-bottom: 20px;
-  box-shadow: 0 0 7px #8a2be2,
+  box-shadow:
+    0 0 7px #8a2be2,
     0 0 42px #8a2be2;
 }
 
@@ -461,7 +465,8 @@ main {
   border: 2px solid white;
   transition-duration: 1s;
   transform: scale(1.03);
-  box-shadow: 0 0 7px #fff,
+  box-shadow:
+    0 0 7px #fff,
     0 0 42px #8a2be2;
 }
 
@@ -621,7 +626,8 @@ main {
   color: white;
   border-radius: 5px;
   border: 2px solid #8a2be2;
-  box-shadow: 0 0 7px #8a2be2,
+  box-shadow:
+    0 0 7px #8a2be2,
     0 0 42px #8a2be2;
 }
 
@@ -670,7 +676,8 @@ footer {
 
 .icons a:hover {
   transform: scale(1.5);
-  box-shadow: 0 0 10px #fff,
+  box-shadow:
+    0 0 10px #fff,
     0 0 21px #fff,
     0 0 42px #3cb9fc,
     0 0 82px #3cb9fc;
