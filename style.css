@@ -438,7 +438,7 @@ main {
   color: #f4f5f7;
   margin-bottom: 20px;
 }
-
+       
 .buttom {
   gap: 10px;
   width: 161px;
@@ -1084,5 +1084,52 @@ ul {
     /* background-color: yellow; */
 
     width: 1030px;
+  }
+
+  .testarea {
+    background-color: black;
+    height: 775px;
+  }
+
+  .test1box {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    border: 2px solid black;
+    background-image: url(images/neonpicturefirstproject.jpg);
+    opacity: 0%;
+    transition-duration: 2s;
+    margin: auto;
+
+  }
+
+  .test1box:hover {
+    opacity: 100%;
+    height: 775px;
+    width: 100%;
+    background-image: url(images/neonpicturefirstproject.jpg);
+    background-repeat: no-repeat;
+  }
+
+
+
+  .blind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 500px;
+    width: 50px;
+    height: 100px;
+    background-color: rgb(56, 56, 56);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid lightblue;
+    border-left: none;
+    color: white;
+    font-family: roboto;
+    font-weight: bolder;
   }
 }
