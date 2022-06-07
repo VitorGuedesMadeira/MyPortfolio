@@ -438,7 +438,7 @@ main {
   color: #f4f5f7;
   margin-bottom: 20px;
 }
-       
+
 .buttom {
   gap: 10px;
   width: 161px;
@@ -1100,7 +1100,6 @@ ul {
     opacity: 0%;
     transition-duration: 2s;
     margin: auto;
-
   }
 
   .test1box:hover {
@@ -1110,8 +1109,6 @@ ul {
     background-image: url(images/neonpicturefirstproject.jpg);
     background-repeat: no-repeat;
   }
-
-
 
   .blind {
     display: flex;
@@ -1129,7 +1126,7 @@ ul {
     border: 1px solid lightblue;
     border-left: none;
     color: white;
-    font-family: roboto;
+    font-family: roboto, sans-serif;
     font-weight: bolder;
   }
 }
