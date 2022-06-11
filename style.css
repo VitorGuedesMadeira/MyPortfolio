@@ -8,7 +8,11 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -80,6 +84,7 @@ header {
 
 main {
   background-color: white;
+  background-image: linear-gradient(to right, black , rgb(57, 1, 57) 10%, rgb(50, 43, 70), rgb(111, 148, 213), white 110%);
 }
 
 .headline {
@@ -93,7 +98,6 @@ main {
   background-repeat: no-repeat;
   background-position: 500% 50%;
   background-size: 90%;
-  border-bottom-left-radius: 10%;
 }
 
 .headlinetitle {
@@ -143,8 +147,13 @@ main {
   border-radius: 50px;
 }
 
+.workssectionbody {
+  background-image: linear-gradient(to bottom, black 0%, transparent 30%, black 100%);
+  
+}
+
 .worksstart {
-  background-color: white;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   padding: 0 25px;
@@ -166,12 +175,12 @@ main {
 .worksstart .border {
   width: 327px;
   height: 0;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #ffffff;
   margin: auto;
 }
 
 .firstproject {
-  background-color: white;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -191,6 +200,9 @@ main {
   height: 237px;
   width: 327px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
+  box-shadow:
+  0 0 2px #fff,
+  0 0 10px #3cb9fc;
 }
 
 .firstprojectpicture:hover {
@@ -198,7 +210,7 @@ main {
 }
 
 .firstproject h2 {
-  color: #091e42;
+  color: white;
   font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -208,7 +220,7 @@ main {
 }
 
 .firstproject p {
-  color: #091e42;
+  color: white;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -220,10 +232,11 @@ main {
 .skillsused2 li {
   display: inline;
   width: 295px;
-  color: #091e42;
+  color: white;
   border: 1px solid #8993a4;
+  background-color: rgba(0, 0, 0, 0.359);
   padding: 5px 10px;
-  margin-right: 10px;
+  margin-right: 3px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -245,8 +258,10 @@ main {
   font-size: 17px;
   line-height: 24px;
   box-shadow:
-    0 0 7px #8a2be2,
-    0 0 42px #8a2be2;
+    0 0 4px #ffffff74,
+    0 0 14px #ffffff74,
+    0 0 24px #8a2be2,
+    0 0 40px #8a2be2;
   transition-duration: 0.1s;
 }
 
@@ -284,7 +299,7 @@ main {
   gap: 24px;
   height: 100%;
   padding-bottom: 150px;
-  background-color: white;
+  background-color: transparent;
   justify-items: center;
 }
 
@@ -298,6 +313,9 @@ main {
   border-bottom-right-radius: 50px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
   transition-duration: 1s;
+  box-shadow:
+  0 0 2px #fff,
+  0 0 10px #3cb9fc;
 }
 
 .projects h2 {
@@ -404,7 +422,6 @@ main {
   background-repeat: no-repeat;
   background-size: 75%;
   background-position: 200% 100%;
-  border-top-right-radius: 10%;
 }
 
 .aboutmestuff {
@@ -546,7 +563,7 @@ main {
 }
 
 .paragraph {
-  color: #172b4d;
+  color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -580,6 +597,7 @@ main {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  border-radius: 10px;
 }
 
 .form input:hover {
@@ -626,8 +644,10 @@ main {
   border-radius: 5px;
   border: 2px solid #8a2be2;
   box-shadow:
-    0 0 7px #8a2be2,
-    0 0 42px #8a2be2;
+    0 0 4px #ffffff74,
+    0 0 14px #ffffff74,
+    0 0 24px #8a2be2,
+    0 0 40px #8a2be2;
 }
 
 .finalbuttom:hover,
@@ -658,7 +678,6 @@ footer {
 
 .footer {
   padding-top: 25px;
-  background-color: white;
   height: 72px;
   border-top: 1px solid rgb(180, 180, 180);
 }
@@ -851,6 +870,10 @@ ul {
     padding-bottom: 150px;
   }
 
+  .workssectionbody {
+    padding-bottom: 150px;
+  }
+
   .firstproject {
     /* background-color: orange; */
 
@@ -858,7 +881,6 @@ ul {
     flex-direction: row;
     justify-content: start;
     gap: 25px;
-    background-color: white;
     margin: auto;
     width: 700px;
     padding-left: 0;
@@ -1086,30 +1108,6 @@ ul {
     width: 1030px;
   }
 
-  .testarea {
-    background-color: black;
-    height: 775px;
-  }
-
-  .test1box {
-    height: 100px;
-    width: 100%;
-    background-color: black;
-    border: 2px solid black;
-    background-image: url(images/neonpicturefirstproject.jpg);
-    opacity: 0%;
-    transition-duration: 2s;
-    margin: auto;
-  }
-
-  .test1box:hover {
-    opacity: 100%;
-    height: 775px;
-    width: 100%;
-    background-image: url(images/neonpicturefirstproject.jpg);
-    background-repeat: no-repeat;
-  }
-
   .blind {
     display: flex;
     flex-direction: column;
@@ -1117,7 +1115,7 @@ ul {
     align-items: center;
     position: fixed;
     left: 0;
-    top: 500px;
+    top: 450px;
     width: 50px;
     height: 100px;
     background-color: rgb(56, 56, 56);
@@ -1128,5 +1126,10 @@ ul {
     color: white;
     font-family: roboto, sans-serif;
     font-weight: bolder;
+    box-shadow:
+    0 0 7px #fff,
+    0 0 42px #3cb9fc;
   }
+
 }
+
