@@ -57,7 +57,7 @@ body {
   display: none;
 }
 
-.active .menupartdesktop{
+.active .menupartdesktop {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -72,7 +72,7 @@ body {
 
 .active .menupartlogo img {
   content:url('images/Icon.png');
- }
+}
 
 .active li {
   padding: 20px;
@@ -102,7 +102,7 @@ body {
 
 main {
   background-color: white;
-  background-image: linear-gradient(to right, black , rgb(57, 1, 57) 10%, rgb(50, 43, 70), rgb(111, 148, 213), white 110%);
+  background-image: linear-gradient(to right, black, rgb(57, 1, 57) 10%, rgb(50, 43, 70), rgb(111, 148, 213), white 110%);
 }
 
 .headline {
@@ -167,7 +167,6 @@ main {
 
 .workssectionbody {
   background-image: linear-gradient(to bottom, black 0%, transparent 30%, black 100%);
-  
 }
 
 .worksstart {
@@ -193,7 +192,7 @@ main {
 .worksstart .border {
   width: 327px;
   height: 0;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #fff;
   margin: auto;
 }
 
@@ -217,10 +216,9 @@ main {
   border-radius: 10px;
   height: 237px;
   width: 327px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
   box-shadow:
-  0 0 2px #fff,
-  0 0 10px #3cb9fc;
+    0 0 2px #fff,
+    0 0 10px #3cb9fc;
 }
 
 .firstprojectpicture:hover {
@@ -329,11 +327,10 @@ main {
   background-image: url(images/backgroundprojects.png);
   border-radius: 5px;
   border-bottom-right-radius: 50px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.219);
   transition-duration: 1s;
   box-shadow:
-  0 0 2px #fff,
-  0 0 10px #3cb9fc;
+    0 0 2px #fff,
+    0 0 10px #3cb9fc;
 }
 
 .projects h2 {
@@ -581,7 +578,7 @@ main {
 }
 
 .paragraph {
-  color: #ffffff;
+  color: #fff;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -976,7 +973,7 @@ ul {
     width: 450px;
     margin: 0;
   }
-  
+
   .headlineitems {
     /* background-color: yellow; */
 
@@ -1129,9 +1126,7 @@ ul {
     font-family: roboto, sans-serif;
     font-weight: bolder;
     box-shadow:
-    0 0 7px #fff,
-    0 0 42px #3cb9fc;
+      0 0 7px #fff,
+      0 0 42px #3cb9fc;
   }
-
 }
-
