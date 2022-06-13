@@ -70,6 +70,10 @@ body {
   line-height: 20px;
 }
 
+.active a {
+ 
+}
+
 .active .menupartdesktop{
   display: block;
   position: absolute;
