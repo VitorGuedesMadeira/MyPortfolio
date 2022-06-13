@@ -81,6 +81,22 @@ body {
   line-height: 20px;
 }
 
+.active a {
+ 
+}
+
+.active .menupartdesktop{
+  display: block;
+  position: absolute;
+  background-color: #212121;
+  top: 50px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 0 15%;
+
+}
+
 main {
   background-color: white;
   background-image: linear-gradient(to right, black , rgb(57, 1, 57) 10%, rgb(50, 43, 70), rgb(111, 148, 213), white 110%);
