@@ -70,19 +70,21 @@ body {
   line-height: 20px;
 }
 
-.active a {
- 
+
+.active .menupartlogo img {
+ content:url('images/linkedin.png');
 }
 
 .active .menupartdesktop{
   display: block;
   position: absolute;
   background-color: #212121;
-  top: 50px;
+  top: 49px;
   left: 0;
   height: 100vh;
   width: 100%;
   padding: 0 15%;
+  opacity: 0.75;
 
 }
 
