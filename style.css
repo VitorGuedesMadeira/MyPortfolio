@@ -23,13 +23,13 @@ body {
   background-color: #3e3c3c;
   position: fixed;
   width: 100%;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   height: 48px;
   padding: 0 15%;
   align-items: center;
   margin: auto;
+  z-index: 1;
 }
 
 .logo {
@@ -60,14 +60,14 @@ body {
 .active .menupartdesktop{
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   position: absolute;
   background-color: #3e3c3c;
-  top: 48px;
+  top: 45px;
   left: 0;
   height: 100vh;
   width: 100%;
-  padding: 0 15%;
+  padding: 100px 15%;
 }
 
 .active .menupartlogo img {
@@ -85,17 +85,6 @@ body {
 
 .active #imagesize {
   height: 40px;
-}
-
-.active .menupartdesktop {
-  display: block;
-  background-color: #6F6C6B;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  padding: 0 15%;
 }
 
 .menupartlogo img:hover {
@@ -987,7 +976,7 @@ ul {
     width: 450px;
     margin: 0;
   }
-
+  
   .headlineitems {
     /* background-color: yellow; */
 
