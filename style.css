@@ -57,7 +57,7 @@ body {
   display: none;
 }
 
-.active .menupartdesktop {
+.active .menupartdesktop{
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -77,10 +77,6 @@ body {
 .active li {
   padding: 20px;
   border-bottom: 1px solid white;
-}
-
-.active li a {
-  font-size: 2em;
 }
 
 .active #imagesize {
@@ -758,6 +754,10 @@ ul {
   text-shadow:
     0 0 7px #fff,
     0 0 42px #3cb9fc;
+}
+
+.active li a {
+  font-size: 2em;
 }
 
 /* MEDIA QUERIES */
