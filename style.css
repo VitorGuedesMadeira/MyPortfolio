@@ -71,7 +71,7 @@ body {
 }
 
 .active .menupartlogo img {
-  content:url ('images/Icon.png');
+  content: url('images/Icon.png');
 }
 
 .active li {
