@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  background-image: linear-gradient(to bottom, #3e3c3c 90%, transparent);
+  background-color: #3e3c3c;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -57,15 +57,53 @@ body {
   display: none;
 }
 
-.active .menupartdesktop {
-  display: block;
-  background-color: #6F6C6B;
+.active .menupartdesktop{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   position: absolute;
-  top: 45px;
+  background-color: #3e3c3c;
+  top: 50px;
   left: 0;
   height: 100vh;
   width: 100%;
   padding: 0 15%;
+}
+
+.active li {
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+
+.active li a {
+  font-size: 2em;
+}
+
+.active #imagesize {
+  height: 40px;
+}
+
+.active .menupartdesktop {
+  display: block;
+  background-color: #6F6C6B;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 0 15%;
+}
+
+.menupartlogo {
+  background-image: url(images/menupequeno.png);
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+.activeimage .menupartlogo {
+  background-image: url(images/Icon.png);
+  background-repeat: no-repeat;
+  z-index: 1000;
 }
 
 .menupartlogo img:hover {
@@ -79,22 +117,6 @@ body {
   font-weight: 600;
   font-size: 15px;
   line-height: 20px;
-}
-
-.active a {
- 
-}
-
-.active .menupartdesktop{
-  display: block;
-  position: absolute;
-  background-color: #212121;
-  top: 50px;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  padding: 0 15%;
-
 }
 
 main {
