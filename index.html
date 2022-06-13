@@ -10,24 +10,19 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logobox">
-                <a class="logo menupart neonText2" href="#">My<strong>Logo</strong></a>
-            </div>
+    <header class="container">
+        <a class="logo neonText2" href="#">My<strong>Logo</strong></a>
     
-            <nav class="menu">
-                <div class="hoverlogo">
-                    <a class="menupart menupartlogo" href="#"><img src="images/menupequeno.png" alt=""></a>
-                </div>
-                <div class="menupartdesktop neonText2">
-                    <a href="#Portfolio">Portfolio</a>
-                    <a href="#Aboutme">About</a>
-                    <a href="#Contact">Contact</a>
-                    <a href="#Formulary"><img src="images/messageicon.png" alt=""></a>
-                </div>
-            </nav>
-        </div>
+        <nav class="menu">
+            <a id="menubutton" class="menupartlogo" onclick="toggleMenu()" href="#"><img src="images/menupequeno.png" alt="hamburgermenu"></a>
+
+            <ul class="menupartdesktop neonText2">
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Aboutme">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Formulary"><img src="images/messageicon.png" alt=""></a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -265,9 +260,11 @@
         <img src="images/Shape.png" alt="">
     </footer>
 
-    <a href="#" class="neonText2">
+    <a id="testing" href="#" class="neonText2">
         <div class="blind">PwD</div>
     </a>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

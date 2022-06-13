@@ -19,27 +19,17 @@ body {
   width: 100%;
 }
 
-header {
+.container {
   background-image: linear-gradient(to bottom, #3e3c3c 90%, transparent);
   position: fixed;
   width: 100%;
   z-index: 1;
-}
-
-.container {
   display: flex;
   justify-content: space-between;
   height: 48px;
-  padding: 0 25px;
+  padding: 0 15%;
   align-items: center;
-  width: 375px;
   margin: auto;
-}
-
-.logobox {
-  padding: 10px 12px;
-  width: 101px;
-  height: 44px;
 }
 
 .logo {
@@ -47,6 +37,13 @@ header {
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 3px;
+  padding: 10px 12px;
+  width: 101px;
+  height: 44px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .menu {
@@ -56,21 +53,12 @@ header {
   border-radius: 8px;
 }
 
-.hoverlogo:hover {
-  transform: scale(1.1);
-}
-
-.logobox:hover {
-  transform: scale(1.05);
-}
-
-.menupart {
-  width: 18px;
-  height: 12px;
-}
-
 .menupartdesktop {
   display: none;
+}
+
+.menupartlogo img:hover {
+  transform: scale(1.1);
 }
 
 .menupartdesktop a {
@@ -686,7 +674,7 @@ footer {
   padding: 10px;
 }
 
-.menupartdesktop a:hover {
+.menupartdesktop li:hover {
   border-bottom: 1px solid white;
   color: white;
   transform: scale(1.05);
@@ -746,16 +734,7 @@ ul {
 }
 
 /* MEDIA QUERIES */
-
 @media all and (min-width: 1000px) {
-  .container {
-    /* background-color: blue; */
-
-    width: 700px;
-    margin: auto;
-    padding: 0;
-  }
-
   .menu {
     width: 300px;
     height: 40px;
@@ -958,13 +937,6 @@ ul {
 }
 
 @media all and (min-width: 1200px) {
-  .container {
-    /* background-color: green; */
-
-    width: 1030px;
-    margin: auto;
-  }
-
   .headlinetitle {
     font-family: 'Crete Round', sans-serif;
     font-style: normal;
