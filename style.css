@@ -57,7 +57,7 @@ body {
   display: none;
 }
 
-.active .menupartdesktop{
+.active .menupartdesktop {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -71,7 +71,7 @@ body {
 }
 
 .active .menupartlogo img {
-  content:url('images/Icon.png');
+  content:url ('images/Icon.png');
 }
 
 .active li {
@@ -703,6 +703,10 @@ footer {
   transform: scale(1.05);
 }
 
+.active li a {
+  font-size: 2em;
+}
+
 .icons a:hover {
   transform: scale(1.5);
   box-shadow:
@@ -754,10 +758,6 @@ ul {
   text-shadow:
     0 0 7px #fff,
     0 0 42px #3cb9fc;
-}
-
-.active li a {
-  font-size: 2em;
 }
 
 /* MEDIA QUERIES */
