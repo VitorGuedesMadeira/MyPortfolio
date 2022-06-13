@@ -57,6 +57,17 @@ body {
   display: none;
 }
 
+.active .menupartdesktop {
+  display: block;
+  background-color: #6F6C6B;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 0 15%;
+}
+
 .menupartlogo img:hover {
   transform: scale(1.1);
 }
