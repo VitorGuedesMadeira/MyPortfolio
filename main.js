@@ -12,4 +12,4 @@ function closeMenu() {
 }
 
 menubutton.onclick = function () { toggleMenu(); };
-iconsButtons = function () { closeMenu(); };
+iconsButtons.onclick = function () { closeMenu(); };
