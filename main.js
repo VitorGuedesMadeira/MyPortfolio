@@ -108,7 +108,8 @@ projects.forEach( (project, index)=> {
    let btnSeeProject = document.createElement('button');
    let btnText = document.createTextNode('See project');
    btnSeeProject.setAttribute("class", "buttons neonText2"); 
-   btnSeeProject.setAttribute("id", `buttom${project.projectID}`);
+   //btnSeeProject.setAttribute("id", `btnSeeProject${project.projectID}`);
+   btnSeeProject.setAttribute("id", project.projectID);
    btnSeeProject.appendChild(btnText);
    divProject.appendChild(btnSeeProject);
    //Technologis ul
@@ -138,13 +139,24 @@ projects.forEach( (project, index)=> {
 
 const newModal = document.getElementById('modalID');
 
-function showModal(ID) {
-  const element = modalObj[ID];
+function fillModal(ID) {
+  const element = projects[ID];
   let subTitle = document.createElement('h2');
-  let subTitleText = document.createTextNode(element.partner);
+  let subTitleText = document.createTextNode(element.name);
   subTitle.appendChild(subTitleText);
   newModal.appendChild(subTitle);
 }
 
+dinamicProjects.addEventListener('click', function (e) {
+  let elementId = e.target.id;
+  // But only alert for elements that have an buttons class
+  if (e.target.classList.contains('buttons')) {
+    //alert(e.target.innerHTML);
+    fillModal(elementId);
+    toggleModal('modal-containerID0');
+  }
+});
 
-btnSeeProject.addEventListener('click', showModal());
+let btnShowProject=document.querySelector('.buttons');
+
+/*btnShowProject.addEventListener('click', () => showModal(btnShowProject.id));*/
