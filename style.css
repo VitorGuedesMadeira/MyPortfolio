@@ -782,10 +782,10 @@ ul {
 }
 
 #x-button {
-  float: right;
-  border-style: none;
-  background-color: white;
+  float: right;;
+  background-color: red;
   color: grey;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */
