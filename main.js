@@ -9,3 +9,4 @@ function closeMenu() {
 }
 
 nav.onclick = function () { toggleMenu(); };
+nav.onclick = function () { closeMenu(); };

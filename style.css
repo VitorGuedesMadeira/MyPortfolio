@@ -83,6 +83,12 @@ body {
   height: 40px;
 }
 
+.menupartdesktop {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
 .menupartlogo img:hover {
   transform: scale(1.1);
 }
@@ -774,12 +780,6 @@ ul {
 
   .menupartlogo {
     display: none;
-  }
-
-  .menupartdesktop {
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
   }
 
   .headline {
