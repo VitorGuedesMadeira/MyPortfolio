@@ -1,12 +1,15 @@
 const nav = document.querySelector('.menu');
+const menubutton = document.querySelectorAll('#menubutton');
+const iconsButtons = document.querySelectorAll('.menu-links');
 
 function toggleMenu() {
   nav.classList.toggle('active');
+  menubutton.classList.toggle('active');
 }
 
 function closeMenu() {
   nav.classList.remove('active');
 }
 
-nav.onclick = function () { toggleMenu(); };
-nav.onclick = function () { closeMenu(); };
+menubutton.onclick = function () { toggleMenu(); };
+iconsButtons = function () { closeMenu(); };
