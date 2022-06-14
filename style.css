@@ -768,6 +768,10 @@ ul {
     border-radius: 8px;
   }
 
+  .active .menupartdesktop {
+    display: none;
+  }
+
   .menupartlogo {
     display: none;
   }
