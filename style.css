@@ -769,15 +769,16 @@ ul {
   height: 100%;
   z-index: 2000;
   padding: 10% 10%;
+  display: none;
+}
+
+.modal-container.showUp {
   display: flex;
-  visibility: hidden;
 }
 
 .modal {
   background-color: white;
   padding: 5% 5%;
-  visibility: hidden;
-
 }
 
 #x-button {

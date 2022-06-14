@@ -16,4 +16,12 @@ iconsButtons.onclick = function () { closeMenu(); };
 
 //----------------------------------------------------------//
 
+const buttonProject1 = document.querySelector('#firstprojectbuttom');
+
+function toggleModal(ID){
+  const modal = document.getElementById(ID);
+  modal.classList.add('showUp');
+ }
+
+ buttonProject1.addEventListener('click', () => toggleModal('modal-containerID'));
 
