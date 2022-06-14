@@ -93,16 +93,7 @@ const projects = [
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
     linkSource:'www.github.com'
-  },
-  {
-    projectID:6,
-    name: 'Proffesional art printing data',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard',
-    featuredImage: 'images/firstprojectbig.png',
-    technologies:['html', 'bootstrap', 'Ruby'],
-    linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
-  },
+  }
 ];
 
 const dinamicProjects = document.querySelector('#dinamicProject');
@@ -111,7 +102,6 @@ projects.forEach( (project, index)=> {
   //Div projects
   let divProject=document.createElement('div');
   divProject.setAttribute("class","projects");
-  divProject.setAttribute("style","background:red");
   //See project button
    let btnSeeProject = document.createElement('button');
    let btnText = document.createTextNode('See project');
@@ -128,10 +118,19 @@ projects.forEach( (project, index)=> {
     liTech.appendChild(liText);
     techUl.appendChild(liTech);
     divProject.appendChild(techUl);
-   }
-   );
-   //Add div to dinamicProjects
-   dinamicProjects.appendChild(divProject);
+   });
+     //description
+     let descriptionTag = document.createElement('p');
+     let descriptionText = document.createTextNode(project.description);
+     descriptionTag.appendChild(descriptionText);
+     divProject.appendChild(descriptionTag);
+     //title
+     let projectName = document.createElement('h2');
+     let projectNameText = document.createTextNode(project.name);
+     projectName.appendChild(projectNameText);
+     divProject.appendChild(projectName);
+      //Add div to dinamicProjects
+      dinamicProjects.appendChild(divProject);
 })
 
 
