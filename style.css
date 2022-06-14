@@ -760,6 +760,33 @@ ul {
     0 0 42px #3cb9fc;
 }
 
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  padding: 10% 10%;
+  display: flex;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  padding: 5% 5%;
+  visibility: hidden;
+
+}
+
+#x-button {
+  float: right;
+  border-style: none;
+  background-color: white;
+  color: grey;
+}
+
 /* MEDIA QUERIES */
 @media all and (min-width: 1000px) {
   .menu {

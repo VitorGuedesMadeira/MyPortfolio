@@ -13,3 +13,7 @@ function closeMenu() {
 
 menubutton.onclick = function () { toggleMenu(); };
 iconsButtons.onclick = function () { closeMenu(); };
+
+//----------------------------------------------------------//
+
+
