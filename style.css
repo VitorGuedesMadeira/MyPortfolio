@@ -797,12 +797,11 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
-  padding: 25px;
-  height: 80%;
-  width: 80%;
+  padding: 10px;
+  max-height: 90%;
+  max-width: 90%;
   gap: 15px;
   animation: modal 0.5s;
-
 }
 
 .modal h2 {
@@ -816,22 +815,26 @@ ul {
 
 .displayFlexModal {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:30px
+
 }
 
 .displayFlexModal2 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  background-color: red;
+  width: 100%;
 }
 
 .displayFlexModal img {
-  width: 55%;
+  width: 250px;
 }
 
 .displayFlexModal p {
-  text-align: left;
-  padding: 0 20px;
+  max-width: 311px;
+  max-height: 220px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -857,20 +860,27 @@ ul {
 #x-button {
   background-color: red;
   color: black;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
   z-index: 10000;
 }
 
-.link-source {
-  position: relative;
-  right: 38%;
-  top: 90%;
+.divLinks {
+  display: flex;
+  gap: 25px;
+  padding: 25px 0;
 }
 
-.link-live {
-  position: relative;
-  right: 28%;
-  top: 90%;
+.link-source, .link-live {
+  padding: 10px;
+  background: #F55800;
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
 }
 
 @keyframes modal {
