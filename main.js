@@ -47,7 +47,8 @@ const projects = [
     featuredImageSmall: 'images/backgroundprojects2.png',
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
+    linkSource:'www.github.com',
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
   },
   {
     projectID:1,
@@ -56,7 +57,8 @@ const projects = [
     featuredImage: 'images/firstprojectbig.png',
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
+    linkSource:'www.github.com',
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
   },
   {
     projectID:2,
@@ -65,7 +67,8 @@ const projects = [
     featuredImage: 'images/firstprojectbig.png',
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
+    linkSource:'www.github.com',
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
   },
   {
     projectID:3,
@@ -74,7 +77,8 @@ const projects = [
     featuredImage: 'images/firstprojectbig.png',
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
+    linkSource:'www.github.com',
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
   },
   {
     projectID:4,
@@ -83,7 +87,8 @@ const projects = [
     featuredImage: 'images/firstprojectbig.png',
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
+    linkSource:'www.github.com',
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
   },
   {
     projectID:5,
@@ -92,11 +97,10 @@ const projects = [
     featuredImage: 'images/firstprojectbig.png',
     technologies:['html', 'bootstrap', 'Ruby'],
     linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com'
+    linkSource:'www.github.com',
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
   }
 ];
-
-
 
 const dinamicProjects = document.querySelector('#dinamicProject');
 
@@ -166,14 +170,22 @@ function fillModal(ID) {
               divModal.appendChild(imgModal);
                 //Modal description
                 let modalDescription = document.createElement('p');
-                let modalDescriptionText = document.createTextNode(element.description);
+                let modalDescriptionText = document.createTextNode(element.modalDescription);
                 modalDescription.appendChild(modalDescriptionText);
                 divModal.appendChild(modalDescription);
                   //Modal Links
                   let modalLinkLiveVersion = document.createElement('a');
+                  let modalLinkLiveVersionText = document.createTextNode('See Live');
                   modalLinkLiveVersion.setAttribute('href', element.linkLiveVersion);
+                  modalLinkLiveVersion.setAttribute('class', 'link-live');
                   let modalLinkSource = document.createElement('a');
+                  let modalLinkSourceText = document.createTextNode('See Source');
                   modalLinkSource.setAttribute('href', element.linkSource);
+                  modalLinkSource.setAttribute('class', 'link-source');
+                  modalLinkLiveVersion.appendChild(modalLinkLiveVersionText);
+                  modalLinkSource.appendChild(modalLinkSourceText);
+                  divModal.appendChild(modalLinkLiveVersion);
+                  divModal.appendChild(modalLinkSource);
 }
 
 function clearModal(ID) {
