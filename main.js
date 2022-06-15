@@ -140,18 +140,54 @@ projects.forEach( (project, index)=> {
 const newModal = document.getElementById('modalID');
 
 function fillModal(ID) {
-  const element = projects[ID];
-  let subTitle = document.createElement('h2');
-  let subTitleText = document.createTextNode(element.name);
-  subTitle.appendChild(subTitleText);
-  newModal.appendChild(subTitle);
+    const element = projects[ID];
+    let subTitle = document.createElement('h2');
+    let subTitleText = document.createTextNode(element.name);
+    subTitle.appendChild(subTitleText);
+    newModal.appendChild(subTitle);
+        //Modal Technologies ul
+        let techUl = document.createElement('ul');
+        techUl.setAttribute("class","skillsused");
+        let techs = element.technologies;
+        techs.forEach((tech)=>{
+        let liTech = document.createElement('li');
+        let liText = document.createTextNode(tech);
+        liTech.appendChild(liText);
+        techUl.appendChild(liTech);
+        newModal.appendChild(techUl);
+        });
+            //Div modal (image + description + links)
+            let divModal = document.createElement('div');
+            divModal.setAttribute("class","displayFlexModal");
+            newModal.appendChild(divModal);
+              //Modal Image
+              let imgModal = document.createElement('img');
+              imgModal.setAttribute("src", "images/imageModalBig.png");
+              divModal.appendChild(imgModal);
+                //Modal description
+                let modalDescription = document.createElement('p');
+                let modalDescriptionText = document.createTextNode(element.description);
+                modalDescription.appendChild(modalDescriptionText);
+                divModal.appendChild(modalDescription);
+                  //Modal Links
+                  let modalLinkLiveVersion = document.createElement('a');
+                  modalLinkLiveVersion.setAttribute('href', element.linkLiveVersion);
+                  let modalLinkSource = document.createElement('a');
+                  modalLinkSource.setAttribute('href', element.linkSource);
+}
+
+function clearModal(ID) {
+  var div = document.getElementById(ID);
+  while(div.firstChild) {
+      div.removeChild(div.firstChild);
+  }
 }
 
 dinamicProjects.addEventListener('click', function (e) {
   let elementId = e.target.id;
   // But only alert for elements that have an buttons class
   if (e.target.classList.contains('buttons')) {
-    //alert(e.target.innerHTML);
+    clearModal(newModal.id);
     fillModal(elementId);
     toggleModal('modal-containerID0');
   }
