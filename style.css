@@ -1127,27 +1127,27 @@ ul {
     width: 95%;
     height: 95%;
     gap: 20px;
-}
+  }
 
-.displayFlexModal2 {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 0;
-  height: 100%;
-}
+  .displayFlexModal2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    height: 100%;
+  }
 
-.displayFlexModal img {
-  content: url('images/ImageModalBig.png');
-  min-height: 60%;
-  min-width: 60%;
-}
+  .displayFlexModal img {
+    content: url('images/ImageModalBig.png');
+    min-height: 60%;
+    min-width: 60%;
+  }
 
-.divLinks {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
+  .divLinks {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 }
 
 @media all and (min-width: 1200px) {
@@ -1326,23 +1326,23 @@ ul {
     gap: 20px;
   }
 
-.displayFlexModal img {
-  content: url('images/ImageModalBig.png');
-  min-height: 70%;
-  min-width: 70%;
-}
+  .displayFlexModal img {
+    content: url('images/ImageModalBig.png');
+    min-height: 70%;
+    min-width: 70%;
+  }
 
-.displayFlexModal2 {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 0;
-  height: 100%;
-}
+  .displayFlexModal2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    height: 100%;
+  }
 
-.divLinks {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
+  .divLinks {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 }
