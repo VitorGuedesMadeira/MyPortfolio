@@ -16,7 +16,7 @@ iconsButtons.onclick = function () { closeMenu(); };
 
 //-------------------Modal functions OPEN/CLOSE-----------------//
 
-const mainProjButtom = document.querySelector('#mainprojectbuttom');
+//const mainProjButtom = document.querySelector('#mainprojectbuttom');
 const closureButtom = document.querySelectorAll('.close-buttom');
 
 function toggleModal(ID) {
@@ -34,7 +34,7 @@ function toggleModal(ID) {
   }
 }
 
-mainProjButtom.addEventListener('click', () => toggleModal('modal-containerID0'));
+//mainProjButtom.addEventListener('click', () => toggleModal('modal-containerID0'));
 
 //-------------------DATA STORAGE (array of objects)------------------------//
 //CARDS
@@ -52,18 +52,7 @@ const projects = [
   },
   {
     projectID:1,
-    name: 'Multi-Post Stories',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-    featuredImageBig: 'images/firstprojectbig.png',
-    featuredImageSmall: 'images/backgroundprojects2.png',
-    technologies:['html', 'bootstrap', 'Ruby'],
-    linkLiveVersion:'www.google.com',
-    linkSource:'www.github.com',
-    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
-  },
-  {
-    projectID:1,
-    name: 'Multi-Post Stories',
+    name: 'Proffesional art printing data',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
     featuredImageBig: 'images/firstprojectbig.png',
     featuredImageSmall: 'images/backgroundprojects2.png',
@@ -125,8 +114,9 @@ const projects = [
 ];
 
 const dinamicProjects = document.querySelector('#dinamicProject');
-//for(let i=1 ; i<object.length; i++)
-projects.forEach( (project, index)=> {
+for(let index=1 ; index<projects.length; index++){
+//projects.forEach( (project, index)=> {
+  let project = projects[index];
   //Div projects
   let divProject=document.createElement('div');
   divProject.setAttribute("class","projects");
@@ -161,7 +151,7 @@ projects.forEach( (project, index)=> {
      divProject.appendChild(projectName);
       //Add div to dinamicProjects
       dinamicProjects.appendChild(divProject);
-});
+};
 
 const newModal = document.getElementById('modalID');
 
@@ -217,13 +207,20 @@ function clearModal(ID) {
   }
 }
 
+function showModal(ID){
+  clearModal(newModal.id);
+  fillModal(ID);
+  toggleModal('modal-containerID0');
+}
+
 dinamicProjects.addEventListener('click', function (e) {
   let elementId = e.target.id;
   // But only alert for elements that have an buttons class
   if (e.target.classList.contains('buttons')) {
-    clearModal(newModal.id);
-    fillModal(elementId);
-    toggleModal('modal-containerID0');
+    //clearModal(newModal.id);
+    //fillModal(elementId);
+    //toggleModal('modal-containerID0');
+    showModal(elementId);
   }
 });
 
