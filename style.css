@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   height: 48px;
-  padding: 0 15%;
+  padding: 0 8%;
   align-items: center;
   margin: auto;
   z-index: 1;
@@ -71,6 +71,7 @@ body {
 }
 
 .active .menupartlogo img {
+  margin-top: 15px;
   content: url('images/Icon.png');
 }
 
