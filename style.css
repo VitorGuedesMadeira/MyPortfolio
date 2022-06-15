@@ -803,6 +803,7 @@ ul {
   gap: 15px;
   animation: modal 0.5s;
   position: relative;
+  border-radius: 5px;
 }
 
 .divTitle {
@@ -1337,10 +1338,6 @@ ul {
   gap: 30px;
   padding: 0;
   height: 100%;
-}
-
-.displayFlexModal2 p {
-  min-width: 415px;
 }
 
 .divLinks {
