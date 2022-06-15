@@ -1,7 +1,11 @@
-//-----------------Hamburger menu--------------------------//
+//----------------VARIABLES--------------------------------//
+
 const nav = document.querySelector('.menu');
 const menubutton = document.querySelectorAll('#menubutton');
 const iconsButtons = document.querySelectorAll('.menu-links');
+const closeButtom = document.querySelectorAll('#x-button');
+
+//-----------------Hamburger menu--------------------------//
 
 function toggleMenu() {
   nav.classList.toggle('active');
@@ -15,7 +19,6 @@ menubutton.onclick = function () { toggleMenu(); };
 iconsButtons.onclick = function () { closeMenu(); };
 
 //-------------------Modal functions OPEN/CLOSE-----------------//
-const closeButtom = document.querySelectorAll('#x-button');
 
 function toggleModal(ID) {
   const modal = document.getElementById(ID);
@@ -111,7 +114,6 @@ const projects = [
 ];
 
 const dinamicProjects = document.querySelector('#dinamicProject');
-
 //CARDS BEING GENERATED
 for(let index=1 ; index<projects.length; index++){
   //projects.forEach( (project, index)=> {
@@ -154,14 +156,17 @@ for(let index=1 ; index<projects.length; index++){
 };
 
 const newModal = document.getElementById('modalID');
-
 //GENERATING MODALS
 function fillModal(ID) {
   const element = projects[ID];
+  //div for Title and techonolgies
+  let divTitle = document.createElement('div');
+  divTitle.setAttribute('class', 'divTitle');
+  newModal.appendChild(divTitle)
   let subTitle = document.createElement('h2');
   let subTitleText = document.createTextNode(element.name);
   subTitle.appendChild(subTitleText);
-  newModal.appendChild(subTitle);
+  divTitle.appendChild(subTitle);
     //Modal Technologies ul
     let techUl = document.createElement('ul');
     techUl.setAttribute("class","skillsused");
@@ -171,7 +176,7 @@ function fillModal(ID) {
     let liText = document.createTextNode(tech);
     liTech.appendChild(liText);
     techUl.appendChild(liTech);
-    newModal.appendChild(techUl);
+    divTitle.appendChild(techUl);
     });
       //Div modal (image + description + links)
       let divModal = document.createElement('div');
@@ -183,9 +188,8 @@ function fillModal(ID) {
         divModal.appendChild(imgModal);
           //div for p and div(links)
           let divInner = document.createElement('div');
-          divInner.setAttribute('class', 'divInner');
           divInner.setAttribute('class', "displayFlexModal2");
-          divModal.appendChild(divInner)
+          divModal.appendChild(divInner);
             //Modal description
             let modalDescription = document.createElement('p');
             let modalDescriptionText = document.createTextNode(element.modalDescription);
@@ -194,7 +198,7 @@ function fillModal(ID) {
               //div for links
               let divLinks = document.createElement('div');
               divLinks.setAttribute('class', 'divLinks');
-              divInner.appendChild(divLinks)
+              divInner.appendChild(divLinks);
                 //Modal Links
                 let modalLinkLiveVersion = document.createElement('a');
                 let modalLinkLiveVersionText = document.createTextNode('See Live');
@@ -214,7 +218,7 @@ function fillModal(ID) {
                   closureButtom.setAttribute('id', 'x-button');
                   closureButtom.setAttribute('class', 'close-buttom');
                   closureButtom.appendChild(closureButtomX);
-                  divInner.appendChild(closureButtom);
+                  newModal.appendChild(closureButtom);
 }
 
 function clearModal(ID) {
@@ -242,3 +246,5 @@ dinamicProjects.addEventListener('click', function (e) {
 });
 
 let btnShowProject=document.querySelector('.buttons');
+
+closeButtom.onclick = function () { closeModal(); }
