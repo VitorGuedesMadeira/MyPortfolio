@@ -73,7 +73,6 @@ body {
 .active .menupartlogo img {
   content: url('images/Icon.png');
   position: fixed;
-  margin-top: 30px;
   z-index: 1000;
 }
 
@@ -616,6 +615,14 @@ main {
   font-size: 15px;
   line-height: 24px;
   border-radius: 10px;
+}
+
+.form input:valid {
+  border: 3px solid green;
+}
+
+.form input:invalid {
+  border: 3px dashed red;
 }
 
 .form input:hover {
