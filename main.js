@@ -241,14 +241,6 @@ dinamicProjects.addEventListener('click', (e) => {
   }
 });
 
-//  -------------------CLIENT-SIDE FORMULARY VALIDATION -----------------//
-
-const nameArea = document.querySelector('#this');
-const emailArea = document.querySelector('#this');
-const textareaArea = document.querySelector('#this');
-const submitButton = document.querySelector('#this');
-
-
 
 
 
