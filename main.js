@@ -249,15 +249,11 @@ dinamicProjects.addEventListener('click', (e) => {
 
 // -----------------------------------------------------------
 
-//variables of formulary (form - email - name)
+// variables of formulary (form - email - name)
 const form = document.getElementById('form');
 const email = document.getElementById('email');
-//eventListener for submit
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    validateInputs(); 
-});
-//set error classes
+
+// set error classes
 const setError = (email, message) => {
   const emailBorder = document.querySelector('.emailBorder');
   const inputControl = document.querySelector('.input-control');
@@ -267,9 +263,9 @@ const setError = (email, message) => {
   inputControl.classList.remove('success');
   emailBorder.classList.remove('colorsuccess');
   emailBorder.classList.add('colorerror');
-}
-//set success classes
-const setSuccess = email => {
+};
+// set success classes
+const setSuccess = () => {
   const emailBorder = document.querySelector('.emailBorder');
   const inputControl = document.querySelector('.input-control');
   const errorDisplay = inputControl.querySelector('.error');
@@ -278,32 +274,37 @@ const setSuccess = email => {
   inputControl.classList.remove('error');
   emailBorder.classList.add('colorsuccess');
   emailBorder.classList.remove('colorerror');
-}
-//check for valid email signs
-const isValidEmail = email => {
+};
+// check for valid email signs
+const isValidEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email));
-}
-//check if email is lowercase
+};
+// check if email is lowercase
 const checkLowerCase = (emailValueCheck) => {
-  if(emailValueCheck === emailValueCheck.toLowerCase()){
-    return true
-  } else {
-    false
+  if (emailValueCheck === emailValueCheck.toLowerCase()) {
+    return true;
   }
-}
-//Validate all values in the inputs (user inputs)
+  return false;
+};
+// Validate all values in the inputs (user inputs)
 const validateInputs = () => {
-  const emailValue = email.value.trim(); //Removes the white spaces
-  //(email)
-  if(emailValue === '') {
-      setError(email, 'Email is required');
+  const emailValue = email.value.trim(); // Removes the white spaces
+  // (email)
+  if (emailValue === '') {
+    setError(email, 'Email is required');
   } else if (!isValidEmail(emailValue)) {
-      setError(email, 'Provide a valid email adress');
+    setError(email, 'Provide a valid email adress');
   } else if (!checkLowerCase(emailValue)) {
-      setError(email, 'Use lower case');
+    setError(email, 'Use lower case');
   } else {
-      setSuccess(email);
-      //form.submit();
+    setSuccess(email);
+    form.submit();
   }
 };
+
+// eventListener for submit
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  validateInputs();
+});
