@@ -360,10 +360,6 @@ main {
   line-height: 44px;
 }
 
-.projects h2:hover {
-  color: #8a2be2;
-}
-
 .buttons {
   width: 327px;
   background-image: radial-gradient(circle at 50%, #120052 10%, black);
@@ -423,10 +419,6 @@ main {
   font-size: 15px;
   line-height: 20px;
   display: inline;
-}
-
-.skillsused2 li:hover {
-  background-color: #892be258;
 }
 
 .aboutme {
@@ -711,12 +703,6 @@ footer {
   padding: 10px;
 }
 
-.menupartdesktop li:hover {
-  border-bottom: 1px solid white;
-  color: white;
-  transform: scale(1.05);
-}
-
 .active li a {
   font-size: 2em;
 }
@@ -776,7 +762,6 @@ ul {
 
 .modal-container {
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -816,8 +801,8 @@ ul {
 }
 
 .modal h2 {
-  color: #172B4D;
-  font-family: 'Crete Round';
+  color: #172b4d;
+  font-family: 'Crete Round', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -841,7 +826,7 @@ ul {
 
 .displayFlexModal p {
   max-width: 311px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -881,11 +866,26 @@ ul {
   gap: 25px;
 }
 
-.link-source, .link-live {
-  padding: 10px;
-  background: #F55800;
+.projects h2:hover {
+  color: #8a2be2;
+}
+
+.skillsused2 li:hover {
+  background-color: #892be258;
+}
+
+.menupartdesktop li:hover {
+  border-bottom: 1px solid white;
   color: white;
-  font-family: 'Inter';
+  transform: scale(1.05);
+}
+
+.link-source,
+.link-live {
+  padding: 10px;
+  background: #f55800;
+  color: white;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -895,8 +895,9 @@ ul {
 @keyframes modal {
   from {
     opacity: 0;
-    transform: translate3d(0, -60px, 0); 
+    transform: translate3d(0, -60px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -1121,7 +1122,6 @@ ul {
   .displayFlexModal {
     display: flex;
     flex-direction: row;
-    height: 100%;
     overflow: hidden;
     margin: auto;
     width: 95%;
