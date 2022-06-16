@@ -70,12 +70,6 @@ body {
   padding: 100px 15%;
 }
 
-.active .menupartlogo img {
-  content: url('images/Icon.png');
-  position: fixed;
-  z-index: 1000;
-}
-
 .active .container .logo {
   margin: 20px;
 }
@@ -87,10 +81,6 @@ body {
 
 .active #imagesize {
   height: 40px;
-}
-
-.menupartlogo img:hover {
-  transform: scale(1.1);
 }
 
 .menupartdesktop a {
@@ -716,10 +706,6 @@ footer {
     0 0 82px #3cb9fc;
 }
 
-.footer img:hover {
-  transform: rotate(360deg);
-}
-
 ul {
   list-style-type: none;
 }
@@ -864,6 +850,20 @@ ul {
   display: flex;
   justify-content: space-between;
   gap: 25px;
+}
+
+.active .menupartlogo img {
+  content: url('images/Icon.png');
+  position: fixed;
+  z-index: 1000;
+}
+
+.footer img:hover {
+  transform: rotate(360deg);
+}
+
+.menupartlogo img:hover {
+  transform: scale(1.1);
 }
 
 .projects h2:hover {
