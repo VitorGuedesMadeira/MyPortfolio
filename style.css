@@ -598,14 +598,6 @@ main {
   line-height: 24px;
   border-radius: 10px;
 }
-/*
-.form input:valid {
-  border: 3px solid green;
-}
-
-.form input:invalid {
-  border: 3px dashed red;
-}*/
 
 .form input:hover {
   background-color: #fbf8f7;
@@ -617,12 +609,10 @@ main {
 
 .form.success input {
   border: 3px solid green;
-
 }
 
 .form.error input {
   border: 3px dashed red;
-
 }
 
 .form input::placeholder {
