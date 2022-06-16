@@ -598,17 +598,31 @@ main {
   line-height: 24px;
   border-radius: 10px;
 }
-
+/*
 .form input:valid {
   border: 3px solid green;
 }
 
 .form input:invalid {
   border: 3px dashed red;
-}
+}*/
 
 .form input:hover {
   background-color: #fbf8f7;
+}
+
+.form input:focus {
+  outline: 0;
+}
+
+.form.success input {
+  border: 3px solid green;
+
+}
+
+.form.error input {
+  border: 3px dashed red;
+
 }
 
 .form input::placeholder {
@@ -749,13 +763,15 @@ ul {
 .modal-container {
   background-color: rgba(0, 0, 0, 0.7);
   align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 2000;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
   display: none;
 }
 
@@ -767,8 +783,6 @@ ul {
 .modal {
   display: flex;
   flex-direction: column;
-  max-height: 90%;
-  width: 90%;
   background-color: white;
   padding: 10px;
   gap: 15px;
