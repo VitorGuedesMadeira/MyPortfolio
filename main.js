@@ -240,8 +240,3 @@ dinamicProjects.addEventListener('click', (e) => {
     showModal(elementId);
   }
 });
-
-
-
-
-
