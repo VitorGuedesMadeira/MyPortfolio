@@ -557,7 +557,6 @@ main {
 }
 
 .formulary {
-  text-align: center;
   padding: 100px 30px;
 }
 
@@ -578,7 +577,6 @@ main {
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
-  background-color: blue;
   border-radius: 4px;
   font-size: 12px;
 }
@@ -588,47 +586,45 @@ main {
   flex-direction: column;
 }
 
-.input-control textarea {
+
+input {
   border: 2px solid white;
   border-radius: 4px;
   display: block;
   font-size: 12px;
   padding: 10px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
-.input-control textarea:focus {
-  outline: 0;
+.emailBorder.colorsuccess input {
+  border: 3px solid #09c372;
 }
 
-.input-control input {
-  border: 2px solid white;
-  border-radius: 4px;
-  display: block;
-  font-size: 12px;
-  padding: 10px;
-  width: 100%;
-}
-
-.input-control input:focus {
-  outline: 0;
-}
-
-.input-control.success input {
-  border-color: green;
-}
-
-.input-control.error input {
-  border-color: red;
+.emailBorder.colorerror input {
+  border: 3px solid #ff3860;
 }
 
 .input-control .error {
-  color: red;
-  font-size: 9px;
+  color: #ff3860;
+  font-size: 12px;
+  font-family: sans-serif;
   height: 13px;
-  text-align: left;
+  text-align: center;
+  margin-top: 25px;
+  text-shadow: 0 0 2px black;
+  transition-duration: 0.5s;
 }
-/*
+
+.input-control.success .error {
+  color: #09c372;
+  font-size: 2em;
+}
+
+.positionmessage {
+  font-weight: 900;
+}
+
 #form input::placeholder {
   color: #979493;
   font-family: 'Inter', sans-serif;
@@ -645,14 +641,14 @@ main {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-}*/
+}
 
 #form textarea {
   background-color: #fbf8f7;
   margin-bottom: 25px;
-  margin-top: 200px;
   height: 114px;
   padding: 20px 10px;
+  border-radius: 5px;
 }
 
 .finalbuttom {
@@ -662,7 +658,6 @@ main {
   font-size: 17px;
   line-height: 24px;
   padding: 12px;
-  gap: 10px;
   background-color: #8a2be2;
   color: white;
   border-radius: 5px;
@@ -867,7 +862,21 @@ ul {
 .divLinks {
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 50px;
+}
+
+.image-icon1 {
+  background-image: url(images/modalIcon1.png);
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
+.image-icon2 {
+  background-image: url(images/modalIcon2.png);
+  background-size: cover;
+  width: 25px;
+  height: 25px;
 }
 
 .active .menupartlogo img {
@@ -900,6 +909,8 @@ ul {
 
 .link-source,
 .link-live {
+  display: flex;
+  gap: 10px;
   padding: 10px;
   background: #f55800;
   color: white;
@@ -908,6 +919,8 @@ ul {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgb(0, 0, 0, 0.5);
 }
 
 @keyframes modal {
@@ -1102,16 +1115,15 @@ ul {
 
   .formulary {
     /* background-color: blue; */
-
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
     width: 700px;
   }
 
-  .form {
-    align-items: flex-start;
-    margin-top: 45px;
+  #form {
+    height: 100%;
   }
 
   .paragraph {
@@ -1291,7 +1303,7 @@ ul {
     width: 1100px;
   }
 
-  .form {
+  #form {
     margin-top: 100px;
     margin-right: 100px;
   }
