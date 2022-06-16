@@ -141,13 +141,22 @@
             <div class="formulary">
                 <p class="paragraph">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
 
-                <form action="https://formspree.io/f/mgedddnq" method="post">
-                    <ul class="form">
-                        <li><input type="text" name="name" id="name" placeholder="Full name" maxlength="30" required></li>
-                        <li><input type="email" name="email" id="email" placeholder="Email address" required></li>
-                        <li><textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500" required></textarea></li>
-                        <li><button class="finalbuttom" type="submit">Get in Touch</button></li>
-                    </ul>
+                <form id="form" action="https://formspree.io/f/mgedddnq" method="post">
+                    <div class="input-control">
+                        <input type="text" name="name" id="name" placeholder="Full name" maxlength="30">
+                        <small class="error"></small>
+                    <div>
+                    <div class="input-control">
+                        <input type="text" name="email" id="email" placeholder="Email address">
+                        <small class="error"></small>
+                    </div>
+                    <!--
+                    <div class="input-control">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500"></textarea>
+                        <div class="error"></div>
+                    </div>-->
+                    <button class="finalbuttom" type="submit">Get in Touch</button></li>
+                    <small class="error"></small>
                 </form>
             </div>
         </section>
@@ -178,7 +187,7 @@
 
 
 
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
 </body>
 
 </html>

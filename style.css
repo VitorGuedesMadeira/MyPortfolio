@@ -574,48 +574,62 @@ main {
   text-shadow: 0 0 5px blue;
 }
 
-.form {
+#form {
+  width: 300px;
+  margin: 20vh auto 0 auto;
+  padding: 20px;
+  background-color: blue;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.input-control {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
 }
 
-.form input,
-.form textarea {
+.input-control textarea {
+  border: 2px solid white;
+  border-radius: 4px;
   display: block;
-  border: none;
-  border-bottom: 1px solid #dbd8d7;
-  margin: 10px 0;
-  width: 327px;
-  padding: 20px;
-  color: black;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  border-radius: 10px;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
 }
 
-.form input:hover {
-  background-color: #fbf8f7;
-}
-
-.form input:focus {
+.input-control textarea:focus {
   outline: 0;
 }
 
-.form.success input {
-  border: 3px solid green;
+.input-control input {
+  border: 2px solid white;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
 }
 
-.form.error input {
-  border: 3px dashed red;
+.input-control input:focus {
+  outline: 0;
 }
 
-.form input::placeholder {
+.input-control.success input {
+  border-color: green;
+}
+
+.input-control.error input {
+  border-color: red;
+}
+
+.input-control .error {
+  color: red;
+  font-size: 9px;
+  height: 13px;
+  text-align: left;
+}
+/*
+#form input::placeholder {
   color: #979493;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -624,21 +638,20 @@ main {
   line-height: 24px;
 }
 
-.form textarea::placeholder {
+#form textarea::placeholder {
   color: rgba(0, 0, 0, 0.829);
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-}
+}*/
 
-.form textarea {
+#form textarea {
   background-color: #fbf8f7;
-  border: none;
   margin-bottom: 25px;
+  margin-top: 200px;
   height: 114px;
-  width: 327px;
   padding: 20px 10px;
 }
 
@@ -779,6 +792,7 @@ ul {
   animation: modal 0.5s;
   position: relative;
   border-radius: 5px;
+  margin-top: 2%;
 }
 
 .divTitle {
