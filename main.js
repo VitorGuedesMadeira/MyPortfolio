@@ -1,11 +1,11 @@
-//----------------VARIABLES--------------------------------//
+//  ----------------VARIABLES--------------------------------//
 
 const nav = document.querySelector('.menu');
 const menubutton = document.querySelectorAll('#menubutton');
 const iconsButtons = document.querySelectorAll('.menu-links');
 const closeButtom = document.querySelectorAll('.close-buttom');
 
-//-----------------Hamburger menu--------------------------//
+//  -----------------Hamburger menu--------------------------//
 
 function toggleMenu() {
   nav.classList.toggle('active');
@@ -15,8 +15,8 @@ function closeMenu() {
   nav.classList.remove('active');
 }
 
-menubutton.onclick = function () { toggleMenu(); };
-iconsButtons.onclick = function () { closeMenu(); };
+menubutton.onclick = () => { toggleMenu(); };
+iconsButtons.onclick = () => { closeMenu(); };
 
 //-------------------Modal functions OPEN/CLOSE-----------------//
 
@@ -48,7 +48,7 @@ const projects = [
     technologies: ['html', 'bootstrap', 'Ruby'],
     linkLiveVersion: 'https://www.google.com',
     linkSource: 'https://www.github.com',
-    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.',
   },
   {
     projectID: 1,
@@ -59,7 +59,7 @@ const projects = [
     technologies: ['html', 'bootstrap', 'Ruby'],
     linkLiveVersion: 'https://www.google.com',
     linkSource: 'https://www.github.com',
-    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.',
   },
   {
     projectID: 2,
@@ -69,7 +69,7 @@ const projects = [
     technologies: ['html', 'bootstrap', 'Ruby'],
     linkLiveVersion: 'https://www.google.com',
     linkSource: 'https://www.github.com',
-    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.'
+    modalDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.',
   },
   {
     projectID: 3,
@@ -115,7 +115,7 @@ const projects = [
 
 const dinamicProjects = document.querySelector('#dinamicProject');
 //CARDS BEING GENERATED
-for (let index = 1; index < projects.length; index++) {
+for(let index = 1; index < projects.length; index++) {
   //projects.forEach( (project, index)=> {
   let project = projects[index];
   //Div projects
@@ -213,8 +213,8 @@ function fillModal(ID) {
   divLinks.appendChild(modalLinkLiveVersion);
   divLinks.appendChild(modalLinkSource);
   //close buttom for modals
-  let closureButtom = document.createElement('button');
-  closureButtomX = document.createTextNode('X');
+  const closureButtom = document.createElement('button');
+  const closureButtomX = document.createTextNode('X');
   closureButtom.setAttribute('id', 'x-button');
   closureButtom.setAttribute('class', 'close-buttom');
   closureButtom.appendChild(closureButtomX);
@@ -222,7 +222,7 @@ function fillModal(ID) {
 }
 
 function clearModal(ID) {
-  var div = document.getElementById(ID);
+  const div = document.getElementById(ID);
   while (div.firstChild) {
     div.removeChild(div.firstChild);
   }
@@ -235,13 +235,9 @@ function showModal(ID) {
 }
 
 dinamicProjects.addEventListener('click', function (e) {
-  let elementId = e.target.id;
+  const elementId = e.target.id;
   // But only alert for elements that have an buttons class
   if (e.target.classList.contains('buttons')) {
     showModal(elementId);
   }
 });
-
-let btnShowProject = document.querySelector('.buttons');
-
-closeButtom.onclick = function () { closeModal(); }
