@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
     <header class="container">
         <a class="logo neonText2" onclick="closeMenu()" href="#">My<strong>Vitor</strong></a>
     
@@ -141,13 +141,20 @@
             <div class="formulary">
                 <p class="paragraph">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
 
-                <form action="https://formspree.io/f/mgedddnq" method="post">
-                    <ul class="form">
-                        <li><input type="text" name="name" id="name" placeholder="Full name" maxlength="30" required></li>
-                        <li><input type="email" name="email" id="email" placeholder="Email address" required></li>
-                        <li><textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500" required></textarea></li>
-                        <li><button class="finalbuttom" type="submit">Get in Touch</button></li>
-                    </ul>
+                <form id="form" action="https://formspree.io/f/mgedddnq" method="post">
+                        
+                        <input type="text" name="name" id="name" placeholder="Full name" maxlength="30">
+
+                        <div class="emailBorder">
+                            <input type="text" name="email" id="email" placeholder="Email address">
+                        </div>
+
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter text here" maxlength="500"></textarea>
+
+                        <div class="input-control">
+                            <button id="formularyBtn" class="finalbuttom" type="submit">Get in Touch</button>
+                        <small class="error positionmessage"></small>
+                        </div>
                 </form>
             </div>
         </section>
@@ -176,9 +183,7 @@
         </div>
     </section>
 
-
-
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
 </body>
 
 </html>

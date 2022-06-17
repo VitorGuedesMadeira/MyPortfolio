@@ -201,14 +201,20 @@ function fillModal(ID) {
   //  Modal Links
   const modalLinkLiveVersion = document.createElement('a');
   const modalLinkLiveVersionText = document.createTextNode('See Live');
+  const linkIcon1 = document.createElement('div');
+  linkIcon1.setAttribute('class', 'image-icon1');
   modalLinkLiveVersion.setAttribute('href', element.linkLiveVersion);
   modalLinkLiveVersion.setAttribute('class', 'link-live');
+  const linkIcon2 = document.createElement('div');
+  linkIcon2.setAttribute('class', 'image-icon2');
   const modalLinkSource = document.createElement('a');
   const modalLinkSourceText = document.createTextNode('See Source');
   modalLinkSource.setAttribute('href', element.linkSource);
   modalLinkSource.setAttribute('class', 'link-source');
   modalLinkLiveVersion.appendChild(modalLinkLiveVersionText);
   modalLinkSource.appendChild(modalLinkSourceText);
+  modalLinkLiveVersion.appendChild(linkIcon1);
+  modalLinkSource.appendChild(linkIcon2);
   divLinks.appendChild(modalLinkLiveVersion);
   divLinks.appendChild(modalLinkSource);
   //  close buttom for modals
@@ -239,4 +245,66 @@ dinamicProjects.addEventListener('click', (e) => {
   if (e.target.classList.contains('buttons')) {
     showModal(elementId);
   }
+});
+
+// -----------------------------------------------------------
+
+// variables of formulary (form - email - name)
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+
+// set error classes
+const setError = (email, message) => {
+  const emailBorder = document.querySelector('.emailBorder');
+  const inputControl = document.querySelector('.input-control');
+  const errorDisplay = inputControl.querySelector('.error');
+  errorDisplay.innerText = message;
+  inputControl.classList.add('error');
+  inputControl.classList.remove('success');
+  emailBorder.classList.remove('colorsuccess');
+  emailBorder.classList.add('colorerror');
+};
+// set success classes
+const setSuccess = () => {
+  const emailBorder = document.querySelector('.emailBorder');
+  const inputControl = document.querySelector('.input-control');
+  const errorDisplay = inputControl.querySelector('.error');
+  errorDisplay.innerText = '✔';
+  inputControl.classList.add('success');
+  inputControl.classList.remove('error');
+  emailBorder.classList.add('colorsuccess');
+  emailBorder.classList.remove('colorerror');
+};
+// check for valid email signs
+const isValidEmail = (email) => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email));
+};
+// check if email is lowercase
+const checkLowerCase = (emailValueCheck) => {
+  if (emailValueCheck === emailValueCheck.toLowerCase()) {
+    return true;
+  }
+  return false;
+};
+// Validate all values in the inputs (user inputs)
+const validateInputs = () => {
+  const emailValue = email.value.trim(); // Removes the white spaces
+  // (email)
+  if (emailValue === '') {
+    setError(email, 'Email is required');
+  } else if (!isValidEmail(emailValue)) {
+    setError(email, 'Provide a valid email adress');
+  } else if (!checkLowerCase(emailValue)) {
+    setError(email, 'Use lower case');
+  } else {
+    setSuccess(email);
+    form.submit();
+  }
+};
+
+// eventListener for submit
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  validateInputs();
 });
