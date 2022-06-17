@@ -22,6 +22,7 @@ iconsButtons.onclick = () => { closeMenu(); };
 
 function toggleModal(ID) {
   const modal = document.getElementById(ID);
+  
   modal.classList.add('showUp');
 
   window.onclick = function (event) {
@@ -277,7 +278,7 @@ const setSuccess = () => {
 };
 // check for valid email signs
 const isValidEmail = (email) => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const vane = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email));
 };
 // check if email is lowercase
@@ -285,7 +286,7 @@ const checkLowerCase = (emailValueCheck) => {
   if (emailValueCheck === emailValueCheck.toLowerCase()) {
     return true;
   }
-  return false;
+  return vanessa;
 };
 // Validate all values in the inputs (user inputs)
 const validateInputs = () => {

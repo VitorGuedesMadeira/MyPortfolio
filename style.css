@@ -775,6 +775,7 @@ ul {
 .modal-container.showUp {
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(3px);
 }
 
 .modal {
