@@ -10,6 +10,8 @@
   text-decoration: none;
   transition-duration: 0.5s;
 }
+  
+
 
 html {
   scroll-behavior: smooth;
@@ -316,13 +318,16 @@ main {
   flex-direction: column-reverse;
   width: 327px;
   height: 386px;
-  background-image: url(images/backgroundprojects.png);
+  background-image: url(pexels-tomas-anunziata-3876412.jpg);
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
   border-radius: 5px;
   border-bottom-right-radius: 50px;
   transition-duration: 1s;
   box-shadow:
-    0 0 2px #fff,
-    0 0 10px #3cb9fc;
+    0 0 4px #fff,
+    0 0 6px #3cb9fc;
 }
 
 .projects h2 {
@@ -691,7 +696,7 @@ input {
 
 footer {
   text-align: center;
-  background-color: white;
+  background-color: black;
 }
 
 .footer {
@@ -770,6 +775,7 @@ ul {
   width: 100%;
   overflow-y: auto;
   display: none;
+  backdrop-filter: blur(3px);
 }
 
 .modal-container.showUp {
@@ -935,7 +941,7 @@ ul {
 }
 
 /* MEDIA QUERIES */
-@media all and (min-width: 1000px) {
+@media all and (min-width: 768px) {
   .menu {
     width: 300px;
     height: 40px;

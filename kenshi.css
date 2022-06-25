@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.modal-container {
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal {
+    position: relative;
+    background-color: red;
+    color: white;
+    font-size: 2em;
+    width: 90%;
+    height: 90%;
+    padding: 5%;
+    z-index: 1;
+    border-radius: 10%;
+}
+
+.modal-container.show {
+    display: flex;
+}

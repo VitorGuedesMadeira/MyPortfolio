@@ -1,9 +1,17 @@
 //  ----------------VARIABLES--------------------------------//
 
+// variables of hamburger icon
 const nav = document.querySelector('.menu');
 const menubutton = document.querySelectorAll('#menubutton');
 const iconsButtons = document.querySelectorAll('.menu-links');
 const closeButtom = document.querySelectorAll('.close-buttom');
+// variables of formulary (form - email - name)
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+// variables generating the dinamic modals
+const newModal = document.getElementById('modalID');
+// variables generating the dinamic cards
+const dinamicProjects = document.querySelector('#dinamicProject');
 
 //  -----------------Hamburger menu--------------------------//
 
@@ -24,18 +32,14 @@ function toggleModal(ID) {
   const modal = document.getElementById(ID);
   modal.classList.add('showUp');
 
-  window.onclick = function (event) {
+  /*window.onclick = function (event) {
     if (event.target === modal || event.target.className === 'close-buttom') {
       modal.classList.remove('showUp');
     }
-  };
-
-  closeButtom.onclick = function () {
-    modal.classList.remove('showUp');
-  };
+  };*/
 }
 
-//  -------------------DATA STORAGE (array of objects)------------------------//
+//  -------------------DATA STORAGE (array of objects)----------------------//
 
 //  CARDS DATA
 const projects = [
@@ -113,7 +117,6 @@ const projects = [
   },
 ];
 
-const dinamicProjects = document.querySelector('#dinamicProject');
 //  CARDS BEING GENERATED
 for (let index = 1; index < projects.length; index += 1) {
   const project = projects[index];
@@ -154,7 +157,6 @@ for (let index = 1; index < projects.length; index += 1) {
   dinamicProjects.appendChild(divProject);
 }
 
-const newModal = document.getElementById('modalID');
 //  GENERATING MODALS
 function fillModal(ID) {
   const element = projects[ID];
@@ -239,19 +241,7 @@ function showModal(ID) {
   toggleModal('modal-containerID0');
 }
 
-dinamicProjects.addEventListener('click', (e) => {
-  const elementId = e.target.id;
-  // But only alert for elements that have an buttons class
-  if (e.target.classList.contains('buttons')) {
-    showModal(elementId);
-  }
-});
-
-// -----------------------------------------------------------
-
-// variables of formulary (form - email - name)
-const form = document.getElementById('form');
-const email = document.getElementById('email');
+// ---------------------------------------------------------------//
 
 // set error classes
 const setError = (email, message) => {
@@ -303,8 +293,26 @@ const validateInputs = () => {
   }
 };
 
-// eventListener for submit
+// ---------------EVENT LISTENERS---------------------------//
+
+// eventListener for submit buttom on formulary
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   validateInputs();
+});
+
+// eventListener for dinamic cards
+dinamicProjects.addEventListener('click', (event) => {
+  const elementId = event.target.id;
+  // But only alert for elements that have an buttons class
+  if (event.target.classList.contains('buttons')) {
+    showModal(elementId);
+  }
+});
+
+window.addEventListener('click', (event) => {
+  const modal = document.querySelector('#modal-containerID0');
+  if (event.target === modal || event.target.className === 'close-buttom') {
+    modal.classList.remove('showUp');
+  }
 });
